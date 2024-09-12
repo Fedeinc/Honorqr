@@ -49,32 +49,28 @@
             border-radius: 8px;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content::before {
+        .timeline-item:nth-child(odd) .timeline-content::before,
+        .timeline-item:nth-child(even) .timeline-content::before {
             content: '';
             position: absolute;
             top: 10px;
-            left: -8px;
             width: 16px;
             height: 16px;
             background: #3182ce;
             border-radius: 50%;
         }
 
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -8px;
+        }
+
         .timeline-item:nth-child(even) .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 10px;
             right: -8px;
-            width: 16px;
-            height: 16px;
-            background: #3182ce;
-            border-radius: 50%;
         }
     </style>
 </head>
 
 <body class="bg-gray-100">
-
     <!-- Navigation -->
     <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
@@ -88,9 +84,8 @@
                 <div class="md:flex hidden md:ml-4">
                     <ul class="flex space-x-8">
                         <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
-                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
-                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                        <li><a href="#tribute-wall" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
+                        <li><a href="#gallery" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
                         <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
                     </ul>
                 </div>
@@ -105,13 +100,12 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
-                <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
-                <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
-                <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-            </ul>
+            <ul class="flex space-x-8">
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
+                        <li><a href="#tribute-wall" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
+                        <li><a href="#gallery" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                    </ul>
         </div>
     </nav>
 
@@ -155,6 +149,66 @@
                                     <dt class="text-sm font-medium text-gray-500">Date of Passing</dt>
                                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">June 30, 2023</dd>
                                 </div>
+								<div class="max-w-7xl mx-auto p-6">
+    <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">John Doe's Life Timeline</h2>
+
+    <div id="timeline" class="relative space-y-8">
+        <!-- Timeline Event 1 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Born in Smallville</h3>
+                <p class="text-gray-600">January 1, 1950</p>
+                <p class="text-sm text-gray-500">John Doe was born on this day in the small town of Smallville. This was the beginning of an inspiring journey.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Event 2 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Graduated from High School</h3>
+                <p class="text-gray-600">June 15, 1968</p>
+                <p class="text-sm text-gray-500">John completed his high school education and earned recognition for his dedication and hard work.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Event 3 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Married Jane Smith</h3>
+                <p class="text-gray-600">July 20, 1975</p>
+                <p class="text-sm text-gray-500">On this beautiful summer day, John married the love of his life, Jane Smith. Together, they built a family full of love.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Event 4 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">First Child Born</h3>
+                <p class="text-gray-600">September 5, 1978</p>
+                <p class="text-sm text-gray-500">John and Jane welcomed their first child into the world. A new chapter of fatherhood began.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Event 5 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Retired from Work</h3>
+                <p class="text-gray-600">December 1, 2010</p>
+                <p class="text-sm text-gray-500">After years of hard work, John retired from his career as an entrepreneur, leaving behind a legacy of excellence.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Event 6 -->
+        <div class="timeline-item">
+            <div class="timeline-content bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Passed Away</h3>
+                <p class="text-gray-600">June 30, 2023</p>
+                <p class="text-sm text-gray-500">John's journey on Earth came to an end, but his memory lives on through the countless lives he touched.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
                             </dl>
                         </div>
                     </div>
@@ -163,102 +217,48 @@
                 <!-- Main Content -->
                 <div class="lg:col-span-2 space-y-6">
                     <!-- Full Biography -->
-                    <div class="bg-white shadow sm:rounded-lg p-4">
-                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Biography</h2>
-                        <p class="text-gray-900">John Doe was a man of great wisdom and kindness. He loved his family deeply and was always there to lend a helping hand. He was known for his infectious smile and the ability to bring joy to those around him. Born in 1950, John grew up in a small town where he learned the value of hard work and community. He went on to become a successful entrepreneur, always prioritizing the well-being of his employees and customers.</p>
-                        <p class="text-gray-900 mt-4">John married the love of his life, Jane, in 1975. Together, they raised three wonderful children who remember him as a loving and supportive father. John's hobbies included gardening, reading, and volunteering at the local shelter. He believed in giving back to the community and spent countless hours helping those in need.</p>
-                        <p class="text-gray-900 mt-4">Throughout his life, John remained a beacon of positivity and resilience. Even in his final days, he continued to inspire others with his strength and grace. His legacy lives on through his family and the many lives he touched. John will be dearly missed, but his memory will forever remain in our hearts.</p>
-                    </div>
-
-                    <!-- Posts Feed -->
-                    <div class="space-y-6">
-                        <!-- Post -->
-                        <div class="bg-white shadow sm:rounded-lg p-4">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <img class="h-10 w-10 rounded-full" src="IMAGES/Photoleap_24_06_2024_23_08_56_e8uPs.jpg" alt="Profile Picture">
-                                <div>
-                                    <h3 class="text-sm font-medium text-gray-900">Jane Smith</h3>
-                                    <p class="text-xs text-gray-500">2 hours ago</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-900">John was an incredible person who always knew how to make everyone smile. He will be deeply missed.</p>
-                            <div class="mt-4 flex space-x-4">
-                                <button class="text-blue-500 hover:underline">Like</button>
-                                <button class="text-blue-500 hover:underline">Comment</button>
-                            </div>
-                        </div>
-                        <!-- More posts -->
-                    </div>
-                </div>
-            </div>
+  <div class="bg-white shadow-lg sm:rounded-lg p-6 max-w-7xl mx-auto mt-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Biography</h2>
+    <div class="relative overflow-hidden">
+        <!-- Adding motion effect with GSAP -->
+        <div class="fade-in-animation">
+            <p class="text-gray-900 leading-relaxed text-lg">
+                John Doe was a man of great wisdom and kindness, whose legacy is marked by his profound influence on family, friends, and the community. Born on January 1, 1950, in a small town, John grew up with humble beginnings, learning the value of hard work and integrity from an early age. His dedication to his studies and his unyielding determination set him apart even as a young boy, and he went on to graduate from the University of XYZ with honors in 1972. His intellectual curiosity and love for learning never waned, and he continuously sought knowledge throughout his life.
+            </p>
+            <p class="text-gray-900 leading-relaxed text-lg mt-6">
+                In 1975, John married the love of his life, Jane, with whom he shared 48 wonderful years of marriage. Together, they built a beautiful family, raising three children who continue to cherish the lessons of love, compassion, and resilience that John imparted. As a father, John was always present—whether attending school events, coaching sports, or simply offering wise words of encouragement. His family was his pride and joy, and he lived to see each of his children and grandchildren thrive.
+            </p>
+            <p class="text-gray-900 leading-relaxed text-lg mt-6">
+                John's professional life was equally impressive. He started his career in finance, where he quickly rose through the ranks due to his strong work ethic and innovative thinking. By the early 1980s, he had founded his own company, which grew to become a highly respected player in the industry. Despite his success, John remained grounded, treating his employees as extended family and always ensuring their well-being. His leadership style, marked by empathy and humility, made him a beloved figure not only within his company but also in the broader business community.
+            </p>
+            <p class="text-gray-900 leading-relaxed text-lg mt-6">
+                Outside of work, John was passionate about giving back. He dedicated countless hours to charitable causes, including volunteering at local shelters and mentoring young professionals. He believed deeply in the importance of community, and his contributions touched the lives of many. John's love for nature and gardening provided him solace, and his well-tended garden was a reflection of his nurturing spirit.
+            </p>
+            <p class="text-gray-900 leading-relaxed text-lg mt-6">
+                Throughout his life, John faced challenges with grace and strength. Even in his later years, as his health began to decline, he remained a beacon of positivity and resilience. His ability to inspire those around him with his unwavering optimism and kind heart left a lasting impact on everyone who had the privilege of knowing him.
+            </p>
         </div>
-    </main>
-    <main class="container mx-auto mt-20">
-        <div class="flex justify-center">
-            <section class="flex flex-col w-full md:w-2/3 bg-white shadow-lg rounded-lg">
-                <header class="flex justify-between items-center p-4 border-b">
-                    <div class="flex items-center">
-                        <img class="w-10 h-10 rounded-full" src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Tribute Image">
-                        <div class="ml-4">
-                            <p class="text-gray-900">Tributes for John Doe</p>
-                            <p class="text-sm text-gray-600">Family and Friends</p>
-                        </div>
-                    </div>
-                </header>
+    </div>
+</div>
 
-                <div id="messages" class="flex-1 p-4 overflow-auto bg-gray-100">
-                    <!-- Date -->
-                    <div class="flex justify-center mb-4">
-                        <div class="bg-gray-200 px-4 py-2 rounded">
-                            <p class="text-sm uppercase">February 20, 2024</p>
-                        </div>
-                    </div>
+ <main id="tribute-wall" class="max-w-7xl mx-auto p-6">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Tribute Wall</h1>
+            <p class="text-lg text-gray-600">Share your tributes and memories for loved ones</p>
+        </section>
 
-                    <!-- Info Message -->
-                    <div class="flex justify-center mb-4">
-                        <div class="bg-yellow-200 px-4 py-2 rounded">
-                            <p class="text-xs">Messages on this tribute wall are secure and private. Tap for more info.</p>
-                        </div>
-                    </div>
+        <!-- Tribute Submission Form -->
+        <section class="mb-12 bg-white p-8 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Share a Tribute</h2>
+            <form id="tributeForm" class="space-y-4">
+                <input type="text" id="name" class="w-full border rounded p-3" placeholder="Your Name" required />
+                <textarea id="tributeMessage" class="w-full border rounded p-3" rows="4" placeholder="Share a memory or tribute" required></textarea>
+                <input type="file" id="imageInput" class="w-full border rounded p-3" accept="image/*" />
+                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition duration-300 ease-in-out">Post Tribute</button>
+            </form>
+        </section>
 
-                    <!-- Messages -->
-                    <article class="flex mb-4">
-                        <div class="px-4 py-2 rounded bg-gray-100">
-                            <p class="text-sm text-teal-600">Jane Doe</p>
-                            <p class="text-sm">I remember the wonderful times we shared. You will always be in my heart.</p>
-                            <div class="flex justify-between items-center">
-                                <p class="text-xs text-gray-500">12:45 pm</p>
-                                <button class="text-xs text-gray-500" onclick="addReaction(this, '👍')">👍 2</button>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Additional Messages Here -->
-                </div>
-
-                <footer class="flex items-center p-4 border-t">
-                    <div class="relative flex items-center w-full">
-                        <!-- Rich Text Editor -->
-                        <div id="editor" class="w-full h-24"></div>
-                    </div>
-                    <div class="flex items-center ml-2">
-                        <!-- Send Button -->
-                        <button aria-label="Send" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="sendMessage()">
-                            Send
-                        </button>
-                        <!-- File Upload Button -->
-                        <label for="file-upload" class="ml-2 p-2 cursor-pointer">
-                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path>
-                            </svg>
-                            <input id="file-upload" type="file" class="hidden" onchange="uploadFile(event)">
-                        </label>
-                    </div>
-                </footer>
-            </section>
-        </div>
-    </main>
-
-    <main class="container mx-auto mt-20">
+      <main id="gallery" class="container mx-auto mt-20">
         <div class="text-center">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Gallery</h1>
             <p class="text-xl text-gray-700 mb-8">Explore and share memories through photos and videos.</p>
@@ -286,79 +286,194 @@
 
         <!-- Gallery Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Gallery Item -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
-                    <p class="text-gray-600">A cherished memory captured in time.</p>
-                </div>
+    <!-- Gallery Item 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+            <p class="text-gray-600">A cherished memory captured in time.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <video controls class="w-full h-48 object-cover">
+            <source src="images/3110550-hd_1280_720_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+            <p class="text-gray-600">A memorable moment shared through video.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 3 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="IMAGES/IMG-20240711-WA0007.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+            <p class="text-gray-600">A special day captured beautifully.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 4 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <video controls class="w-full h-48 object-cover">
+            <source src="images/6841052-hd_1920_1080_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+            <p class="text-gray-600">Celebrating a milestone moment.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 5 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="images/monument-front-2019.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+            <p class="text-gray-600">A beautiful sunset during an unforgettable day.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 6 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <video controls class="w-full h-48 object-cover">
+            <source src="images/3285060-hd_1280_720_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+            <p class="text-gray-600">A heartwarming family reunion shared in this tribute.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 7 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="images/pexels-august-de-richelieu-4262424.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+            <p class="text-gray-600">A peaceful garden scene that John Doe loved to visit.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 8 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <video controls class="w-full h-48 object-cover">
+            <source src="images/4065302-hd_1280_720_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+            <p class="text-gray-600">A meaningful conversation shared with loved ones.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Item 9 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="images/pexels-ketut-subiyanto-4546019.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+            <p class="text-gray-600">An inspiring view from John Doe’s favorite hiking trail.</p>
+        </div>
+    </div>
+</div>
+
+    </main>              <!-- Posts Feed -->                </div>
             </div>
-            <!-- Gallery Item -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <video controls class="w-full h-48 object-cover">
-                    <source src="images/3110550-hd_1280_720_30fps.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="p-4">
-                    <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
-                    <p class="text-gray-600">A memorable moment shared through video.</p>
-                </div>
-            </div>
-            <!-- Gallery Item -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="IMAGES/IMG-20240711-WA0007.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
-                    <p class="text-gray-600">A special day captured beautifully.</p>
-                </div>
-            </div>
-            <!-- Gallery Item -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <video controls class="w-full h-48 object-cover">
-                    <source src="images/6841052-hd_1920_1080_30fps.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="p-4">
-                    <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
-                    <p class="text-gray-600">Celebrating a milestone.</p>
-                </div>
-            </div>
-            <!-- More items can be added similarly -->
         </div>
     </main>
 
-    <main class="container mx-auto mt-20 p-4">
-        <h1 class="text-3xl font-semibold text-gray-900 mb-4">Remembrance Calendar</h1>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Dates</h2>
-            <div id="calendar" class="flatpickr mb-6"></div>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Lifetime Achievements</h2>
-            <ul id="achievements-list" class="space-y-4">
-                <!-- These will be dynamically populated -->
-            </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Add a Remembrance Date</h2>
-            <form id="remembrance-form">
-                <div class="mb-4">
-                    <label for="title" class="block text-gray-700">Title</label>
-                    <input type="text" id="title" name="title" class="w-full p-2 border rounded-lg" placeholder="e.g., Birthday, Anniversary">
+    <!-- Tribute Wall Section -->
+   
+
+        <!-- Tribute Wall Grid -->
+        <section class="bg-white p-8 shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Tributes</h2>
+    <div id="tributeWall" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Tribute 1 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="IMAGES/Photoleap_24_06_2024_23_08_56_e8uPs.jpg" alt="Jane Smith Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">Jane Smith</h3>
+                    <p class="text-xs text-gray-500">1 day ago</p>
                 </div>
-                <div class="mb-4">
-                    <label for="date" class="block text-gray-700">Date</label>
-                    <input type="text" id="date" name="date" class="w-full p-2 border rounded-lg flatpickr">
-                </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Add Date</button>
-            </form>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Timeline</h2>
-            <div id="timeline" class="relative space-y-8">
-                <!-- Timeline items will be dynamically populated here -->
             </div>
+            <p class="text-gray-900">John was the most compassionate person I have ever known. He always knew how to lift everyone's spirits, even during tough times. His memory will forever remain in our hearts.</p>
         </div>
+
+        <!-- Tribute 2 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="images/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Michael Doe Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">Michael Doe</h3>
+                    <p class="text-xs text-gray-500">3 days ago</p>
+                </div>
+            </div>
+            <p class="text-gray-900">Dad, you were my hero and my guide. I will always remember the life lessons you taught me, and I will do my best to live by your example. I miss you every day.</p>
+        </div>
+
+        <!-- Tribute 3 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="images/Photoleap_24_06_2024_23_10_04_V61eP.jpg" alt="Emily Johnson Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">Emily Johnson</h3>
+                    <p class="text-xs text-gray-500">5 days ago</p>
+                </div>
+            </div>
+            <p class="text-gray-900">John’s generosity was boundless. He was always willing to lend a helping hand, and his wisdom guided so many of us. Rest in peace, John. You will be deeply missed.</p>
+        </div>
+
+        <!-- Tribute 4 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="images/Photoleap_19_06_2024_17_27_54_G0k2F.jpg" alt="Richard Evans Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">Richard Evans</h3>
+                    <p class="text-xs text-gray-500">1 week ago</p>
+                </div>
+            </div>
+            <p class="text-gray-900">John’s ability to connect with people on a deep, emotional level was unparalleled. He was a true friend and mentor. I will always treasure the moments we shared.</p>
+        </div>
+
+        <!-- Tribute 5 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="images/Photoleap_29_06_2024_16_21_09_tF7yE.jpg" alt="Sarah Lee Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">Sarah Lee</h3>
+                    <p class="text-xs text-gray-500">2 weeks ago</p>
+                </div>
+            </div>
+            <p class="text-gray-900">John was an incredible neighbor and friend. His garden was a reflection of the love and care he showed to everyone around him. I will miss his smile and our conversations.</p>
+        </div>
+
+        <!-- Tribute 6 -->
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <img class="h-10 w-10 rounded-full" src="images/Photoleap_24_06_2024_23_28_29_wYsH3.jpg" alt="David Miller Profile Picture">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-900">David Miller</h3>
+                    <p class="text-xs text-gray-500">2 weeks ago</p>
+                </div>
+            </div>
+            <p class="text-gray-900">I had the pleasure of working with John for over a decade, and his leadership and kindness made a lasting impact on all of us. His legacy will live on in the lives he touched.</p>
+        </div>
+    </div>
+</section>
+
     </main>
+
+    <!-- Gallery Section -->
+
+
+    <!-- Remembrance Calendar Section -->
+    
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
@@ -371,15 +486,14 @@
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-    <script>
+</footer>
+
+    <!-- JS Section -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script>
         gsap.from(".timeline-content", {
             scrollTrigger: ".timeline-content",
             opacity: 0,
@@ -565,37 +679,75 @@
             const currentCount = parseInt(currentText.split(' ')[1]) || 0;
             button.textContent = `${emoji} ${currentCount + 1}`;
         }
-
-        // Upload file (photo or video)
-        function uploadFile(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const fileReader = new FileReader();
-                fileReader.onload = function () {
-                    const fileContainer = document.createElement('article');
-                    fileContainer.classList.add('flex', 'justify-center', 'mb-4');
-                    if (file.type.startsWith('image/')) {
-                        fileContainer.innerHTML = `
-                            <div class="bg-white shadow-md px-4 py-2 rounded">
-                                <p class="text-sm text-gray-600">Photo Tribute</p>
-                                <img src="${fileReader.result}" alt="Photo Tribute" class="w-full mt-2 rounded-lg">
-                            </div>`;
-                    } else if (file.type.startsWith('video/')) {
-                        fileContainer.innerHTML = `
-                            <div class="bg-white shadow-md px-4 py-2 rounded">
-                                <p class="text-sm text-gray-600">Video Tribute</p>
-                                <video controls class="w-full mt-2 rounded-lg">
-                                    <source src="${fileReader.result}" type="${file.type}">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>`;
-                    }
-                    document.getElementById('messages').appendChild(fileContainer);
-                };
-                fileReader.readAsDataURL(file);
-            }
-        }
     </script>
+<script>
+      document.getElementById('tributeForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get values from the form
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('tributeMessage').value;
+        const imageInput = document.getElementById('imageInput').files[0];
+
+        // Create a new tribute post
+        const tributeWall = document.getElementById('tributeWall');
+        const tributePost = document.createElement('div');
+        tributePost.classList.add('bg-gray-50', 'shadow', 'rounded-lg', 'fade-in', 'hover-zoom', 'relative');
+        tributePost.style.cursor = 'pointer';
+
+        const tributeName = document.createElement('h3');
+        tributeName.textContent = name;
+        tributeName.classList.add('text-xl', 'font-bold', 'text-gray-800', 'p-4');
+
+        const tributeMessage = document.createElement('p');
+        tributeMessage.textContent = message;
+        tributeMessage.classList.add('text-gray-600', 'p-4');
+
+        tributePost.appendChild(tributeName);
+        tributePost.appendChild(tributeMessage);
+
+        // If an image was uploaded, display it
+        if (imageInput) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.alt = 'Tribute Image';
+            img.classList.add('w-full', 'rounded-lg');
+            tributePost.appendChild(img);
+          };
+          reader.readAsDataURL(imageInput);
+        }
+
+        // Handle modal opening when clicking the post
+        tributePost.addEventListener('click', function () {
+          const modal = document.getElementById('modal');
+          const modalImage = document.getElementById('modalImage');
+          const modalName = document.getElementById('modalName');
+          const modalMessage = document.getElementById('modalMessage');
+
+          // Set modal content
+          modalName.textContent = name;
+          modalMessage.textContent = message;
+          if (imageInput) {
+            modalImage.src = tributePost.querySelector('img').src;
+          }
+
+          // Show modal
+          modal.classList.remove('hidden');
+        });
+
+        tributeWall.appendChild(tributePost);
+
+        // Reset the form
+        document.getElementById('tributeForm').reset();
+      });
+
+      // Close modal
+      document.getElementById('closeModal').addEventListener('click', function () {
+        document.getElementById('modal').classList.add('hidden');
+      });
+    </script>	
 </body>
 
 </html>

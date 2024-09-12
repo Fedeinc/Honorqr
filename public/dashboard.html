@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HonorQR Dashboard - GTA 5 Style</title>
+    <title>HonorQR Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -31,32 +31,65 @@
         .card {
             background-color: #2c2c2c;
             border: 1px solid #444;
+            transition: transform 0.3s ease, background-color 0.3s;
         }
 
         .card:hover {
+            transform: scale(1.05);
             background-color: #333;
+        }
+
+        .card img {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Animation for headers */
+        .animated-header {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animated-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button styles */
+        .btn-animated {
+            background-color: #4caf50;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+        .btn-animated:hover {
+            background-color: #67e067;
+            transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="nav-bar border-b fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav class="nav-bar border-b fixed top-0 left-0 w-full z-50 shadow-md bg-gray-900">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
-                    <span class="text-xl font-semibold ml-3">HonorQR</span>
+                    <span class="text-xl font-semibold ml-3 text-white">HonorQR</span>
                 </div>
                 <div class="hidden md:flex md:ml-4">
                     <ul class="flex space-x-8">
-                        <li><a href="dashboard.html" class="px-3 py-2 rounded hover:bg-gray-700">Home</a></li>
-                        <li><a href="profile.html" class="px-3 py-2 rounded hover:bg-gray-700">Profile</a></li>
-                        <li><a href="privacy.html" class="px-3 py-2 rounded hover:bg-gray-700">Privacy</a></li>
-                        <li><a href="notifications.html" class="px-3 py-2 rounded hover:bg-gray-700">Notifications</a></li>
-                        <li><a href="billing.html" class="px-3 py-2 rounded hover:bg-gray-700">Billing</a></li>
-                        <li><a href="security.html" class="px-3 py-2 rounded hover:bg-gray-700">Security</a></li>
-                        <li><a href="logout.html" class="px-3 py-2 rounded hover:bg-gray-700">Logout</a></li>
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Home</a></li>
+                        <li><a href="profile.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Profile</a></li>
+                        <li><a href="privacy.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Privacy</a></li>
+                        <li><a href="notifications.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Notifications</a></li>
+                        <li><a href="billing.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Billing</a></li>
+                        <li><a href="security.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Security</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded hover:bg-gray-700 text-white">Logout</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
@@ -69,106 +102,87 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col bg-gray-50 border-t border-gray-200">
-                <li><a href="dashboard.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Home</a></li>
-                <li><a href="profile.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Profile</a></li>
-                <li><a href="privacy.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Privacy</a></li>
-                <li><a href="notifications.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Notifications</a></li>
-                <li><a href="billing.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Billing</a></li>
-                <li><a href="security.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Security</a></li>
-                <li><a href="logout.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Logout</a></li>
+            <ul class="flex flex-col bg-gray-900 border-t border-gray-200">
+                <li><a href="dashboard.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Home</a></li>
+                <li><a href="profile.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Profile</a></li>
+                <li><a href="privacy.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Privacy</a></li>
+                <li><a href="notifications.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Notifications</a></li>
+                <li><a href="billing.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Billing</a></li>
+                <li><a href="security.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Security</a></li>
+                <li><a href="logout.html" class="px-4 py-2 text-gray-200 hover:bg-gray-700">Logout</a></li>
             </ul>
         </div>
     </nav>
 
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
     <!-- Dashboard -->
     <div class="max-w-6xl mx-auto py-12 mt-16 px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h2 class="text-3xl font-extrabold">Dashboard</h2>
-
+            <h2 class="text-3xl font-extrabold animated-header">Dashboard</h2>
             <p class="mt-2 text-sm text-gray-500">Manage your HonorQR account here.</p>
         </div>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Profile -->
             <a href="profile.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="images/DALL·E 2024-07-30 10.54.24 - A detailed visual representation of 'Personalize the Memorial' for HonorQR. The image features a computer screen displaying options for customizing th.webp" alt="Profile" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/DALL·E 2024-09-12 21.44.00 - A clean and modern 4K image representing a user profile for a digital memorial platform. The design features a stylized human silhouette with a hear.webp" alt="Profile" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Profile</p>
                 </div>
             </a>
             <!-- Tribute Wall -->
-            <a href="create memorial.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+            <a href="tribute-wall.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="images/DALL·E 2024-07-30 10.52.32 - A detailed visual representation of 'Create a Memorial Profile' for HonorQR. The image features a computer screen displaying the process of filling in.webp" alt="Tribute Wall" class="block mx-auto h-48 w-full object-cover">
-                    <p class="pt-4 pb-4 text-sm font-medium">Create Profile</p>
+                    <img src="images/DALL·E 2024-09-12 21.43.47 - A 4K image representing a digital tribute wall for a memorial platform. The image features elegant cards with heart icons, messages, and a candle sy.webp" alt="Tribute Wall" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Tribute Wall</p>
                 </div>
             </a>
             <!-- Gallery -->
             <a href="gallery.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="IMAGES/IMG-20240712-WA0005.jpg" alt="Gallery" class="block mx-auto h-48 w-full object-cover">
-                    <p class="pt-4 pb-4 text-sm font-medium">Content Management System</p>
+                    <img src="images/DALL·E 2024-09-12 21.43.55 - A modern and sleek 4K image representing a digital gallery for a memorial platform. The image features a series of floating photo frames and video i.webp" alt="Gallery" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Gallery</p>
                 </div>
             </a>
             <!-- QR Locator -->
-            <a href="qr locator.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+            <a href="qr-locator.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="IMAGES/DALL·E 2024-07-30 16.08.10 - A QR code with a magnifying glass in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="QR Locator" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/Photoleap_27_06_2024_00_09_46_Hh4jw.jpg" alt="QR Locator" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Grave Locator</p>
-                </div>
-            </a>
-            <!-- Share QR -->
-            <a href="qr share.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
-                <div>
-                    <img src="IMAGES/IMG-20240618-WA0038.jpg" alt="Share QR" class="block mx-auto h-48 w-full object-cover">
-                    <p class="pt-4 pb-4 text-sm font-medium">Share QR</p>
-                </div>
-            </a>
-            <!-- Remembrance -->
-            <a href="edit profile.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
-                <div>
-                    <img src="images/IMG-20240618-WA0018.jpg" alt="Remembrance" class="block mx-auto h-48 w-full object-cover">
-                    <p class="pt-4 pb-4 text-sm font-medium">Edit Profile</p>
                 </div>
             </a>
             <!-- Chatbot -->
             <a href="chatbot.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="IMAGES/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Chatbot</p>
-                </div>
-            </a>
-            <!-- FAQ -->
-            <a href="faq.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
-                <div>
-                    <img src="IMAGES/DALL·E 2024-07-30 16.10.37 - A question mark inside a circle in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="FAQ" class="block mx-auto h-48 w-full object-cover">
-                    <p class="pt-4 pb-4 text-sm font-medium">FAQ</p>
                 </div>
             </a>
             <!-- Live Streaming -->
             <a href="live-streaming.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="IMAGES/IMG-20240618-WA0044.jpg" alt="Live Streaming" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/IMG-20240618-WA0044.jpg" alt="Live Streaming" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Live Streaming</p>
                 </div>
             </a>
             <!-- Settings -->
-            <a href="account management.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+            <a href="settings.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="images/IMG-20240711-WA0013.jpg" alt="Settings" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/DALL·E 2024-09-12 21.43.32 - A clean and modern 4K image representing a settings dashboard for a memorial platform. The image features a cogwheel or gear icon, symbolizing setti.webp" alt="Settings" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Settings</p>
                 </div>
             </a>
             <!-- Billing -->
-          <a href="billing.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+            <a href="billing.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
                 <div>
-                    <img src="images/IMG-20240711-WA0021.jpg" alt="Billing" class="block mx-auto h-48 w-full object-cover">
+                    <img src="images/DALL·E 2024-09-12 21.42.58 - A clean and modern 4K image representing billing and payment for a memorial platform. The image features a bill or invoice icon along with a credit ca.webp" alt="Billing" class="block mx-auto h-48 w-full object-cover">
                     <p class="pt-4 pb-4 text-sm font-medium">Billing</p>
                 </div>
-          </a><a href="billing.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
-            <div> <img src="images/Photoleap_27_06_2024_00_24_10_ZCHFR.jpg" alt="Billing" class="block mx-auto h-48 w-full object-cover">
-              <p class="pt-4 pb-4 text-sm font-medium">Help and Support</p>
-            </div>
             </a>
         </div>
     </div>
@@ -186,32 +200,29 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>
+        // Animate header when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.animated-header');
+            header.classList.add('visible');
+        });
+
+        // GSAP Animation for cards
+        gsap.from(".card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            stagger: 0.2
+        });
+
+        // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-
-        // Example JavaScript function that could be expanded for dynamic functionality
-        function greetUser() {
-            alert('Welcome to HonorQR!');
-        }
     </script>
 
-    <!-- Optional Python Integration Example -->
-    <!-- 
-    Flask Backend (example)
-    from flask import Flask, render_template
-
-    app = Flask(__name__)
-
-    @app.route('/')
-    def dashboard():
-        return render_template('dashboard.html')
-
-    if __name__ == '__main__':
-        app.run(debug=True)
-    -->
 </body>
 
 </html>
