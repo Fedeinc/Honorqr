@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - HonorQR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
+                <span class="text-xl font-semibold text-gray-900 ml-3">HonorQR</span>
+            </div>
+            <nav class="hidden md:flex md:ml-4">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Home</a></li>
+                    <li><a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Profile</a></li>
+                    <li><a href="privacy.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Privacy</a></li>
+                    <li><a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Notifications</a></li>
+                    <li><a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Billing</a></li>
+                    <li><a href="security.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Security</a></li>
+                    <li><a href="logout.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded" id="mobile-menu-button" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <nav class="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="images/logo.jpg" class="h-10" alt="HonorQR Logo">
+                <span class="text-xl font-semibold text-gray-900">HonorQR</span>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex md:ml-4">
+                <ul class="flex space-x-8 text-gray-900">
+                    <li><a href="index.html" class="px-3 py-2 rounded hover:text-blue-600">Home</a></li>
+                    <li><a href="about.html" class="px-3 py-2 rounded hover:text-blue-600">About</a></li>
+                    <li><a href="features.html" class="px-3 py-2 rounded hover:text-blue-600">Features</a></li>
+                    <li><a href="prices.html" class="px-3 py-2 rounded hover:text-blue-600">Prices</a></li>
+                    <li><a href="faq.html" class="px-3 py-2 rounded hover:text-blue-600">FAQ</a></li>
+                    <li><a href="contact.html" class="px-3 py-2 rounded hover:text-blue-600">Contact</a></li>
+                    <li><a href="signup.html" class="px-3 py-2 rounded hover:text-blue-600">Signup</a></li>
+                    <li><a href="login.html" class="px-3 py-2 rounded hover:text-blue-600">Login</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="hover:bg-gray-200 p-2 rounded text-gray-900">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="flex flex-col space-y-2 bg-gray-100 mt-2">
+            <li><a href="index.html" class="block px-4 py-2">Home</a></li>
+            <li><a href="about.html" class="block px-4 py-2">About</a></li>
+            <li><a href="features.html" class="block px-4 py-2">Features</a></li>
+            <li><a href="prices.html" class="block px-4 py-2">Prices</a></li>
+            <li><a href="faq.html" class="block px-4 py-2">FAQ</a></li>
+            <li><a href="contact.html" class="block px-4 py-2">Contact</a></li>
+            <li><a href="signup.html" class="block px-4 py-2">Signup</a></li>
+            <li><a href="login.html" class="block px-4 py-2">Login</a></li>
+        </ul>
+    </div>
+</nav>
+</header>
+
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-20 p-4">
+        <h1 class="text-3xl font-semibold text-gray-900 mb-6">How It Works</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 1: Create an Account</h2>
+                <p class="text-gray-700">To get started, you need to create an account on HonorQR. This will allow you to access all the features and services we offer. Click the "Sign Up" button on the homepage and fill out the registration form with your details.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 10.51.45 - A serene and modern visual representation of 'Create an Account' and 'Login' steps for HonorQR. The image features a clean and minimalist design with .webp" alt="Create Account" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 2: Set Up Your Memorial Profile</h2>
+                <p class="text-gray-700">Once you have an account, you can set up a memorial profile for your loved one. Add their name, photos, videos, and a biography to create a beautiful tribute. You can also invite friends and family to contribute.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 10.52.32 - A detailed visual representation of 'Create a Memorial Profile' for HonorQR. The image features a computer screen displaying the process of filling in.webp" alt="Set Up Profile" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 3: Generate and Place QR Code</h2>
+                <p class="text-gray-700">HonorQR generates a unique QR code for each memorial profile. Print this QR code and place it on a headstone, plaque, or any other significant location. Visitors can scan the QR code with their smartphones to view the memorial profile.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 16.08.17 - A QR code with a share arrow in a tranquil setting with soft lighting and potted plants, similar to the provided image.webp" alt="Generate QR Code" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 4: Engage with Interactive Tribute Wall</h2>
+                <p class="text-gray-700">The interactive tribute wall allows friends and family to post messages, share memories, and upload photos and videos. This creates a dynamic and living tribute that evolves over time.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 10.55.12 - A detailed visual representation of 'Interactive Tribute Wall' for HonorQR. The image features a computer screen displaying the interactive tribute wa.webp" alt="Interactive Tribute Wall" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 5: Access Grief Support Resources</h2>
+                <p class="text-gray-700">HonorQR offers a variety of grief support resources, including articles, videos, and links to support groups. These resources are designed to help you and your loved ones through the grieving process.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 10.58.30 - A detailed visual representation of 'Access Grief Support Resources' for HonorQR. The image features a computer screen displaying a grief support page.webp" alt="Grief Support" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Step 6: Manage Your Account</h2>
+                <p class="text-gray-700">You can manage your account settings, update your profile, and track contributions from friends and family. HonorQR makes it easy to keep everything organized and up-to-date.</p>
+                <img src="IMAGES/DALL·E 2024-07-30 10.54.24 - A detailed visual representation of 'Personalize the Memorial' for HonorQR. The image features a computer screen displaying options for customizing th.webp" alt="Manage Account" class="mt-4 w-full rounded-lg shadow-md">
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

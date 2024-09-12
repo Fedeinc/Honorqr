@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HonorQR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        /* Custom cursor styles */
+        body {
+            cursor: url('https://source.unsplash.com/random/32x32?cursor'), auto;
+        }
+        .btn-primary {
+            cursor: url('https://source.unsplash.com/random/32x32?pointer'), pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .interactive-element:hover {
+            cursor: url('https://source.unsplash.com/random/32x32?hover'), pointer;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMAGES/about.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Input field styles */
+        .input-field {
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .input-field:focus {
+            border-color: #1d4ed8;
+            box-shadow: 0 0 8px rgba(29, 78, 216, 0.5);
+            outline: none;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <!-- Placeholder for Navigation -->
+    <div id="navigation-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="flex justify-center items-center bg-cover bg-center h-screen hero-bg">
+        <div class="container mx-auto text-center text-white px-4">
+            <h1 class="text-6xl font-serif mb-4 fade-in">Login to HonorQR</h1>
+            <button id="loginButton" class="btn-primary px-6 py-3 rounded-lg text-lg">Login</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Login</h2>
+            <form id="loginForm" method="POST" class="text-left">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="input-field w-full px-4 py-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 font-bold mb-2">Password</label>
+                    <input type="password" id="password" name="password" class="input-field w-full px-4 py-2" required>
+                </div>
+                <button type="submit" class="btn-primary w-full py-3 rounded-lg text-lg mb-4">Login</button>
+                <div class="flex justify-center space-x-4 mb-4">
+                    <button type="button" class="flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-white">
+                        <img src="images/unnamed.png" alt="Google Icon" class="mr-2 w-6 h-6"> Sign in with Google
+                    </button>
+                    <button type="button" class="flex items-center bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white">
+                        <img src="images/Facebook-Logosu.png" alt="Facebook Icon" class="mr-2 w-6 h-6"> Sign in with Facebook
+                    </button>
+                </div>
+                <p class="text-center text-gray-700">Don't have an account? <a href="sign up.html" class="text-blue-600 hover:underline">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Function to load external HTML files into a placeholder
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+
+                    // Initialize mobile menu functionality after loading navigation
+                    if (elementId === 'navigation-placeholder') {
+                        initializeMobileMenu();
+                    }
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Load navigation and footer
+        loadHTML('navigation.html', 'navigation-placeholder');
+        loadHTML('footer.html', 'footer-placeholder');
+
+        // Modal functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginButton = document.getElementById('loginButton');
+            const loginModal = document.getElementById('loginModal');
+            const closeButton = loginModal.querySelector('.close');
+
+            loginButton.addEventListener('click', () => {
+                loginModal.style.display = 'block';
+            });
+
+            closeButton.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize mobile menu functionality
+        function initializeMobileMenu() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

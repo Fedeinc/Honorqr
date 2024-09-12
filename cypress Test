@@ -1,0 +1,21 @@
+describe('Login Page', () => {
+  it('should successfully log in with valid credentials', () => {
+    cy.visit('/login/');
+    cy.get('input[name="username"]').type('testuser');
+    cy.get('input[name="password"]').type('testpassword');
+    cy.get('form').submit();
+
+    // Check if redirected to home page
+    cy.url().should('include', '/home');
+  });
+
+  it('should show an error with invalid credentials', () => {
+    cy.visit('/login/');
+    cy.get('input[name="username"]').type('testuser');
+    cy.get('input[name="password"]').type('wrongpassword');
+    cy.get('form').submit();
+
+    // Check if error message is shown
+    cy.get('.error').should('contain', 'Invalid login credentials');
+  });
+});

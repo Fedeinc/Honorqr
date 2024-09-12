@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Memorial Page - HonorQR</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Custom styles -->
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Branding -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="IMAGES/IMG-20240708-WA0002.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="text-xl font-semibold text-gray-900 dark:text-white">HonorQR</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li>
+                            <a href="index.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Home</a>
+                        </li>
+                        <li>
+                            <a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Profile</a>
+                        </li>
+                        <li>
+                            <a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                            <a href="help.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Help & Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden">
+                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center p-2 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Memorial Page Content -->
+    <section id="create-memorial" class="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 mt-16">
+        <div class="max-w-3xl w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
+            <div class="text-center">
+                <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Create Memorial Page</h2>
+                <p class="mt-2 text-sm text-gray-500">Fill in the details to create a personalized memorial page.</p>
+            </div>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium">Name of the Deceased</label>
+                    <input type="text" id="name" name="name" required class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div>
+                    <label for="birth-date" class="block text-gray-700 font-medium">Date of Birth</label>
+                    <input type="date" id="birth-date" name="birth-date" required class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div>
+                    <label for="death-date" class="block text-gray-700 font-medium">Date of Death</label>
+                    <input type="date" id="death-date" name="death-date" required class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div>
+                    <label for="biography" class="block text-gray-700 font-medium">Biography</label>
+                    <textarea id="biography" name="biography" rows="4" required class="form-textarea px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"></textarea>
+                </div>
+                <div>
+                    <label for="photos" class="block text-gray-700 font-medium">Photos</label>
+                    <input type="file" id="photos" name="photos" accept="image/*" multiple class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div>
+                    <label for="videos" class="block text-gray-700 font-medium">Videos</label>
+                    <input type="file" id="videos" name="videos" accept="video/*" multiple class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div>
+                    <label for="audio" class="block text-gray-700 font-medium">Audio Messages</label>
+                    <input type="file" id="audio" name="audio" accept="audio/*" multiple class="form-input px-4 py-3 rounded-lg block w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300">Create Memorial</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-semibold">HonorQR</span>
+                    <span class="block text-gray-400">© 2024 All rights reserved.</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const navbarMenu = document.getElementById('navbar-default');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+            const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+            navbarToggle.setAttribute('aria-expanded', !expanded);
+        });
+    </script>
+</body>
+
+</html>

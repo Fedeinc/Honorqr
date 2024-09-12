@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HonorQR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Custom cursor styles */
+        body {
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.42.13 - A sleek, modern arrow cursor icon isolated on a transparent background. The icon should be simple and minimalistic, with clean lines and a slight shad.webp'), auto;
+        }
+
+        .btn-primary {
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.22 - A sleek, modern cursor pointer icon, resembling a hand with an extended index finger, isolated on a transparent background. The design should be simpl.webp'), pointer;
+        }
+
+        .interactive-element:hover {
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.34 - A sleek, modern cursor icon in a hover state, with a subtle glow or highlight effect around the arrow, isolated on a transparent background. The desig.webp'), pointer;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/DALL·E 2024-07-30 10.37.53 - A quiet memorial courtyard at dawn, featuring elegant stone benches and flowering plants. The courtyard is surrounded by tall trees, creating a seclud.webp');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        /* Primary button styles */
+        .btn-primary {
+            background-color: #2563eb;
+            color: #fff;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Team card styles */
+        .team-card {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            color: #2e2d31;
+            background: #ffffff;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .team-card_content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: #f2f2f2;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            transform: translateY(150px);
+            transition: transform 0.25s;
+        }
+
+        .team-card:hover .team-card_content {
+            transform: translateY(0);
+        }
+
+        .team-card_title {
+            color: #131313;
+            line-height: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .team-card_subtitle {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #777777;
+        }
+
+        .team-card_description {
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .team-card:hover .team-card_description {
+            opacity: 1;
+            transition-delay: 0.25s;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced transitions and animations */
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hover\:scale-110:hover {
+            transform: scale(1.1);
+        }
+
+        /* Depth and animation on scroll */
+        .scroll-animate {
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <!-- Placeholder for Navigation -->
+    <div id="navigation-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
+        <div class="container mx-auto text-center text-white px-4">
+            <h1 class="text-6xl font-serif mb-4 fade-in">About HonorQR</h1>
+            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Preserve Memories Forever</p>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section id="mission" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-8 fade-in">Our Mission</h2>
+                <p class="text-xl text-gray-700 mb-8 fade-in">
+                    At HonorQR, our mission is to provide a platform that seamlessly blends tradition with technology, offering an innovative way to honor and preserve the memories of our loved ones. We strive to ensure that the legacies of those who have passed continue to inspire and connect future generations.
+                </p>
+                <p class="text-xl text-gray-700 fade-in">
+                    We believe that memories should not only be cherished but should be made accessible to all, transcending time and space. Our platform empowers families and friends to create lasting digital memorials that capture the essence of those they hold dear.
+                </p>
+            </div>
+        </div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <!-- Card 1 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-blue-500 text-4xl mb-4">accessibility_new</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Accessibility</h3>
+                <p class="text-gray-600">
+                    Our platform is designed with inclusivity in mind, ensuring that everyone, regardless of age or technical ability, can create and interact with digital memorials effortlessly.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-green-500 text-4xl mb-4">security</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Security</h3>
+                <p class="text-gray-600">
+                    We prioritize the security and privacy of your memories, using advanced encryption and data protection practices to ensure that your loved ones' legacies are safeguarded.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-red-500 text-4xl mb-4">favorite_border</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Compassion</h3>
+                <p class="text-gray-600">
+                    Compassion is at the heart of everything we do. We are committed to providing a service that respects the emotional needs of our users, offering support during the most challenging times.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-8 fade-in">Our Vision</h2>
+                <p class="text-xl text-gray-700 mb-8 fade-in">
+                    Our vision at HonorQR is to create a world where memories never fade. We aspire to build a platform that bridges the gap between the past and the future, ensuring that the legacies of our loved ones are preserved and accessible for generations to come.
+                </p>
+                <p class="text-xl text-gray-700 fade-in">
+                    By embracing the power of digital technology, we envision a future where every individual’s story continues to inspire, connect, and bring comfort to those they leave behind. HonorQR is more than a memorial service; it's a legacy of love that transcends time.
+                </p>
+            </div>
+        </div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <!-- Card 1: Innovation -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-purple-500 text-4xl mb-4">lightbulb_outline</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Innovation</h3>
+                <p class="text-gray-600">
+                    We are committed to continuous innovation, developing cutting-edge technology to enhance how we preserve and honor memories. Our platform evolves to meet the needs of an ever-changing world.
+                </p>
+            </div>
+            <!-- Card 2: Connection -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-blue-500 text-4xl mb-4">connect_without_contact</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Connection</h3>
+                <p class="text-gray-600">
+                    We believe in the power of connection. HonorQR is designed to bring people together, enabling families and communities to share and celebrate the lives of those they love.
+                </p>
+            </div>
+            <!-- Card 3: Sustainability -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <i class="material-icons text-green-500 text-4xl mb-4">eco</i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Sustainability</h3>
+                <p class="text-gray-600">
+                    Sustainability is at the heart of our mission. By creating digital memorials, we reduce the need for physical resources, ensuring that the environment is preserved for future generations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="team-card smooth-transition hover:scale-110">
+                    <img src="IMAGES/Photoleap_22_06_2024_23_34_17_E5RC4.jpg" alt="Thabo S Dlamini - CEO & Founder">
+                    <div class="team-card_content">
+                        <span class="team-card_title">Thabo S Dlamini</span>
+                        <span class="team-card_subtitle">CEO & Founder</span>
+                        <p class="team-card_description">Thabo is the visionary behind HonorQR, dedicated to transforming the way we remember our loved ones through innovative technology.</p>
+                    </div>
+                </div>
+                <div class="team-card smooth-transition hover:scale-110">
+                    <img src="IMAGES/Photoleap_24_06_2024_23_09_38_b5uew.jpg" alt="Kele Mashele - CTO">
+                    <div class="team-card_content">
+                        <span class="team-card_title">Kele Mashele</span>
+                        <span class="team-card_subtitle">CTO</span>
+                        <p class="team-card_description">Kele leads our tech team, ensuring the platform is robust, user-friendly, and secure, allowing users to create and share lasting memories effortlessly.</p>
+                    </div>
+                </div>
+                <div class="team-card smooth-transition hover:scale-110">
+                    <img src="IMAGES/Photoleap_24_06_2024_23_14_31_GC5GE.jpg" alt="Sam Poe - COO">
+                    <div class="team-card_content">
+                        <span class="team-card_title">Sam Poe</span>
+                        <span class="team-card_subtitle">COO</span>
+                        <p class="team-card_description">Sam oversees daily operations, making sure everything runs smoothly and that our users have the best possible experience with HonorQR.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Conclusion Section -->
+    <section id="about-conclusion" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-8 fade-in">Join Us in Preserving Legacies</h2>
+                <p class="text-xl text-gray-300 mb-8 fade-in">
+                    At HonorQR, we believe that every story deserves to be remembered. Our mission is to provide you with the tools to ensure that the memories of your loved ones are preserved for generations to come. Join us in our journey to create a world where legacies are not forgotten, but cherished and celebrated.
+                </p>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <!-- CTA Card 1: Get Started -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <i class="material-icons text-yellow-500 text-4xl mb-4">launch</i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Get Started Today</h3>
+                    <p class="text-gray-400 mb-4">
+                        Ready to start preserving memories? Create your first digital memorial with HonorQR and make sure the stories of your loved ones live on.
+                    </p>
+                    <a href="sign-up.html" class="inline-block bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300 ease-in-out">Sign Up Now</a>
+                </div>
+                <!-- CTA Card 2: Contact Us -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <i class="material-icons text-blue-500 text-4xl mb-4">contact_support</i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Contact Us</h3>
+                    <p class="text-gray-400 mb-4">
+                        Have questions or need support? Our team is here to help you every step of the way. Reach out to us for any assistance or inquiries.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-blue-500 text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-blue-400 transition duration-300 ease-in-out">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to load external HTML files into a placeholder
+        function loadHTML(file, elementId, callback) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    if (callback) callback(); // Run the callback if it exists
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Load navigation and footer, and initialize mobile menu only after navigation is loaded
+        loadHTML('navigation.html', 'navigation-placeholder', initializeMobileMenu);
+        loadHTML('footer.html', 'footer-placeholder');
+
+        // Mobile menu initialization
+        function initializeMobileMenu() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (hamburgerButton && mobileMenu) { // Check if elements exist
+                hamburgerButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            } else {
+                console.error('Mobile menu elements not found');
+            }
+        }
+    </script>
+
+    <!-- Your existing scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+
+        // Hide loading animation after content is loaded
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+
+        // Scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.scroll-animate').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

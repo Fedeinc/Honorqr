@@ -1,0 +1,16 @@
+[build]
+  command = "python manage.py collectstatic --no-input"
+  publish = "public"  # This should be a relative path to the directory containing your static files
+
+[dev]
+  command = "python manage.py runserver"
+  port = 8000
+
+[functions]
+  external_node_modules = [
+    "module-one",
+    "module-two"
+  ]
+
+[functions.environment]
+  PYTHONUNBUFFERED = "true"

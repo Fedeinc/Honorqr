@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share QR Code - HonorQR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
+                    </a>
+                </div>
+                <div class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
+                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+                <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
+                <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-20">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold mb-6 text-gray-900">Share QR Code</h1>
+
+            <!-- QR Code Image -->
+            <div class="flex justify-center mb-6">
+                <img src="IMAGES/IMG-20240711-WA0013.jpg" alt="QR Code" class="w-48 h-48">
+            </div>
+
+            <!-- QR Code Information -->
+            <div class="mb-6">
+                <p class="text-lg text-gray-700">Scan this QR code to access the memorial page of John Doe. You can share this QR code with friends and family to allow them to visit the online memorial and leave their tributes.</p>
+            </div>
+
+            <!-- Share Options -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Share this QR Code</h2>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Share on Facebook</button>
+                    <button class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-300">Share on Twitter</button>
+                    <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition duration-300">Share on Instagram</button>
+                    <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition duration-300">Copy Link</button>
+                </div>
+            </div>
+
+            <!-- Email Sharing -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Share via Email</h2>
+                <form>
+                    <div class="flex flex-col mb-4">
+                        <label for="email" class="mb-2 text-gray-700">Recipient's Email:</label>
+                        <input type="email" id="email" name="email" class="p-2 border rounded-lg" placeholder="Enter recipient's email">
+                    </div>
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300">Send Email</button>
+                </form>
+            </div>
+
+            <!-- QR Locator and Gravesite -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Locate the Gravesite</h2>
+                <div class="flex justify-center">
+                    <a href="qr-locator.html" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition duration-300">Scan QR to Locate Gravesite</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

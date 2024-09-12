@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HonorQR</title>
+    <meta name="description" content="Get in touch with HonorQR for any inquiries or support. We are here to help you.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        /* Custom cursor styles */
+        body {
+            cursor: url('images/default-cursor.png'), auto;
+        }
+
+        .btn-primary {
+            cursor: url('images/cursor-pointer.png'), pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .interactive-element:hover {
+            cursor: url('images/cursor-hover.png'), pointer;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/DALL·E 2024-07-30 10.50.37 - A serene and modern memorial space at dusk, featuring minimalist architecture with tall, sleek pillars and ambient lighting. The pathway is illuminate.webp');
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Input field styles */
+        .input-field {
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .input-field:focus {
+            border-color: #1d4ed8;
+            box-shadow: 0 0 8px rgba(29, 78, 216, 0.5);
+            outline: none;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Enhanced transitions and animations */
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <!-- Placeholder for Navigation -->
+    <div id="navigation-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
+        <div class="container mx-auto text-center text-white px-4">
+            <h1 class="text-6xl font-serif mb-4 fade-in">Contact HonorQR</h1>
+            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">We are here to help you with any inquiries or support you need.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">Get in Touch</h2>
+            <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 input-field" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 input-field" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 input-field" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary py-3 px-6 rounded-lg text-lg">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8 fade-in">Contact Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center contact-item smooth-transition hover:scale-105" data-aos="fade-up">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a3.75 3.75 0 004.22 0L21 8m-9 4l3-4m0 0l3 4m-3-4v12" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Email</h3>
+                    <p class="text-lg text-gray-700">support@honorqr.online</p>
+                </div>
+                <div class="flex flex-col items-center contact-item smooth-transition hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4m2 6H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phone</h3>
+                    <p class="text-lg text-gray-700">+27 82 687 2331</p>
+                </div>
+                <div class="flex flex-col items-center contact-item smooth-transition hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.955 11.955 0 0112 16c3.042 0 5.824 1.136 7.879 3m0 0A11.956 11.956 0 0122 12a11.956 11.956 0 01-2.121-7.804M12 2a11.956 11.956 0 00-7.879 3m0 0A11.956 11.956 0 002 12c0 3.042 1.136 5.824 3 7.879M12 2v2m0 16v2m-6.121-2.121l1.415 1.415M18.293 6.707l1.414-1.414M6.707 6.707l1.415-1.415M6.121 17.879l1.415-1.415M18.293 17.879l1.414 1.414" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Address</h3>
+                    <p class="text-lg text-gray-700">3331 Roets Drive, Boksburg, RSA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Function to load external HTML files into placeholders
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+
+                    // Initialize mobile menu functionality after loading navigation
+                    if (elementId === 'navigation-placeholder') {
+                        initializeMobileMenu();
+                    }
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Load navigation and footer
+        loadHTML('navigation.html', 'navigation-placeholder');
+        loadHTML('footer.html', 'footer-placeholder');
+
+        // Initialize mobile menu functionality
+        function initializeMobileMenu() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Initialize animations and other scripts
+        AOS.init();
+
+        // Hide loading animation after content is loaded
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HonorQR Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .chat-bubble {
+            max-width: 60%;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .user-bubble {
+            background-color: #E2F7CB;
+            align-self: flex-end;
+        }
+
+        .bot-bubble {
+            background-color: #F2F2F2;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
+                    </a>
+                </div>
+                <div class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
+                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+                <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Dashboard</a></li>
+                <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('hamburger-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-20 p-4">
+        <h1 class="text-3xl font-semibold text-gray-900 mb-4">HonorQR Chatbot</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col h-[70vh]">
+            <div id="chat-container" class="chat-container flex flex-col p-4 mb-4">
+                <!-- Chat messages will be appended here -->
+            </div>
+            <form id="chat-form" class="flex">
+                <input type="text" id="user-input" name="user-input" class="w-full p-2 border rounded-lg" placeholder="Type your message...">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 ml-2 rounded-lg">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function chatbot() {
+            const chatContainer = document.getElementById('chat-container');
+            const chatForm = document.getElementById('chat-form');
+            const userInput = document.getElementById('user-input');
+
+            const prompts = [
+                ["hi", "hey", "hello", "good morning", "good afternoon"],
+                ["how are you", "how is life", "how are things"],
+                ["what are you doing", "what is going on", "what is up"],
+                ["how old are you"],
+                ["who are you", "are you human", "are you bot", "are you human or bot"],
+                ["who created you", "who made you"],
+                ["your name please", "your name", "may i know your name", "what is your name", "what call yourself"],
+                ["i love you"],
+                ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
+                ["bad", "bored", "tired"],
+                ["help me", "tell me story", "tell me joke"],
+                ["ah", "yes", "ok", "okay", "nice"],
+                ["bye", "good bye", "goodbye", "see you later"],
+                ["what should i eat today"],
+                ["bro"],
+                ["what", "why", "how", "where", "when"],
+                ["no", "not sure", "maybe", "no thanks"],
+                [""],
+                ["haha", "ha", "lol", "hehe", "funny", "joke"],
+                ["flip a coin", "heads or tails", "tails or heads", "head or tails", "head or tail", "tail or heads", "tail or head"],
+                ["beer", "buy me a beer", "want a beer"]
+            ];
+
+            const replies = [
+                ["Hello! How can HonorQR assist you in remembering your loved ones today?", "Hi there! Let's talk about how we can create a meaningful digital tribute."],
+                ["I'm here to help you create lasting memories. How can I assist you today?", "Ready to guide you through creating a beautiful memorial. How about you?"],
+                ["I'm here, ready to help you preserve cherished memories with HonorQR.", "Just waiting to assist you in creating a digital legacy for your loved one."],
+                ["I'm timeless, just like the memories you'll preserve with HonorQR."],
+                ["I'm an assistant from HonorQR, here to help you create and manage digital memorials.", "I'm a digital guide from HonorQR, dedicated to helping you honor your loved ones."],
+                ["I was created by the team at HonorQR to assist in preserving memories."],
+                ["I am your HonorQR assistant, here to help you with digital memorials.", "I'm here to help you create and preserve memories."],
+                ["I appreciate your kindness. Let's create something beautiful together.", "Thank you. Let's work on a tribute that honors your loved one."],
+                ["Glad to hear that! HonorQR is all about preserving those wonderful moments.", "It's great to hear positivity. Let's channel that into creating a memorable tribute."],
+                ["I'm here for you. Let's create a tribute that brings comfort and joy.", "It's okay to feel that way. HonorQR can help create a space for healing."],
+                ["How can I assist you with HonorQR today? Would you like to hear about creating a digital memorial?", "Let's create something that honors your loved one. How can I assist you?"],
+                ["Great! Let's move forward with creating a meaningful tribute.", "Wonderful! Let's get started on preserving those precious memories."],
+                ["Goodbye! Remember, HonorQR is here whenever you need to preserve memories.", "See you later! Take care and cherish the memories."],
+                ["How about something that reminds you of a cherished memory with your loved one?", "Maybe a meal that brings back happy memories would be comforting."],
+                ["Bro! Let's create something memorable with HonorQR."],
+                ["Great question! Let's explore how HonorQR can help you.", "I'm here to provide answers and support. How can I assist with HonorQR?"],
+                ["That's okay. If you ever need assistance, HonorQR is here to help.", "No problem. HonorQR is always here to help you create lasting memories."],
+                ["I'm here to assist with anything you need regarding HonorQR and memorials.", "Please let me know how I can assist you with HonorQR."],
+                ["Glad you're in good spirits! Let's make some beautiful memories.", "Laughter is good for the soul. Let's channel that into creating something special with HonorQR."],
+                ["Heads", "Tails"],
+                ["How about sharing a cherished memory instead? HonorQR can help you preserve it forever.", "Maybe we can create a tribute instead. HonorQR is great for preserving memories."]
+            ];
+
+            const alternative = ["Same", "Go on...", "Bro...", "Try again", "I'm listening...", "I don't understand :/"];
+            const coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I don't have COVID", "These are uncertain times"];
+
+            chatForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const userMessage = userInput.value.trim();
+                if (userMessage) {
+                    addMessage(userMessage, 'user');
+                    userInput.value = '';
+                    // Simulate bot response
+                    setTimeout(() => {
+                        const botResponse = getBotResponse(userMessage);
+                        addMessage(botResponse, 'bot');
+                    }, 1000);
+                }
+            });
+
+            function addMessage(message, sender) {
+                const messageBubble = document.createElement('div');
+                messageBubble.classList.add('chat-bubble', sender === 'user' ? 'user-bubble' : 'bot-bubble');
+                messageBubble.innerHTML = message;
+                chatContainer.appendChild(messageBubble);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            function getBotResponse(input) {
+                let product;
+
+                // Remove non-word/space chars
+                let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+                text = text
+                    .replace(/ a /g, " ") // 'tell me a story' -> 'tell me story'
+                    .replace(/i feel /g, "")
+                    .replace(/whats/g, "what is")
+                    .replace(/please /g, "")
+                    .replace(/ please/g, "")
+                    .replace(/r u/g, "are you");
+
+                if (compare(prompts, replies, text)) {
+                    product = compare(prompts, replies, text);
+                } else if (text.match(/thank/gi)) {
+                    product = "You're welcome!";
+                } else if (text.match(/(corona|covid|virus)/gi)) {
+                    product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
+                } else {
+                    product = alternative[Math.floor(Math.random() * alternative.length)];
+                }
+
+                return product;
+            }
+
+            function compare(promptsArray, repliesArray, string) {
+                let reply;
+                let replyFound = false;
+                for (let x = 0; x < promptsArray.length; x++) {
+                    for (let y = 0; y < promptsArray[x].length; y++) {
+                        if (promptsArray[x][y] === string) {
+                            let replies = repliesArray[x];
+                            reply = replies[Math.floor(Math.random() * replies.length)];
+                            replyFound = true;
+                            break;
+                        }
+                    }
+                    if (replyFound) {
+                        break;
+                    }
+                }
+                if (!reply) {
+                    for (let x = 0; x < promptsArray.length; x++) {
+                        for (let y = 0; y < promptsArray[x].length; y++) {
+                            if (levenshtein(promptsArray[x][y], string) >= 0.75) {
+                                let replies = repliesArray[x];
+                                reply = replies[Math.floor(Math.random() * replies.length)];
+                                replyFound = true;
+                                break;
+                            }
+                        }
+                        if (replyFound) {
+                            break;
+                        }
+                    }
+                }
+                return reply;
+            }
+
+            function levenshtein(s1, s2) {
+                var longer = s1;
+                var shorter = s2;
+                if (s1.length < s2.length) {
+                    longer = s2;
+                    shorter = s1;
+                }
+                var longerLength = longer.length;
+                if (longerLength == 0) {
+                    return 1.0;
+                }
+                return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+            }
+
+            function editDistance(s1, s2) {
+                s1 = s1.toLowerCase();
+                s2 = s2.toLowerCase();
+
+                var costs = new Array();
+                for (var i = 0; i <= s1.length; i++) {
+                    var lastValue = i;
+                    for (var j = 0; j <= s2.length; j++) {
+                        if (i == 0)
+                            costs[j] = j;
+                        else {
+                            if (j > 0) {
+                                var newValue = costs[j - 1];
+                                if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                                    newValue = Math.min(Math.min(newValue, lastValue),
+                                        costs[j]) + 1;
+                                costs[j - 1] = lastValue;
+                                lastValue = newValue;
+                            }
+                        }
+                    }
+                    if (i > 0)
+                        costs[s2.length] = lastValue;
+                }
+                return costs[s2.length];
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                chatbot();
+            });
+        }
+    </script>
+</body>
+
+</html>

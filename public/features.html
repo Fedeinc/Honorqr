@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - HonorQR</title>
+    <meta name="description" content="Explore the powerful features of HonorQR and learn how it works to preserve memories forever.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Custom cursor styles */
+        body {
+            cursor: url('images/default-cursor.png'), auto;
+        }
+
+        .btn-primary {
+            cursor: url('images/cursor-pointer.png'), pointer;
+        }
+
+        .interactive-element:hover {
+            cursor: url('images/cursor-hover.png'), pointer;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/Photoleap_27_06_2024_00_17_59_csAgd.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Primary button styles */
+        .btn-primary {
+            background-color: #2563eb;
+            color: #fff;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Card styles */
+        .card {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            color: #2e2d31;
+            background: #ffffff;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .card_content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: #f2f2f2;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            transform: translateY(150px);
+            transition: transform 0.25s;
+        }
+
+        .card:hover .card_content {
+            transform: translateY(0);
+        }
+
+        .card_title {
+            color: #131313;
+            line-height: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card_subtitle {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #777777;
+        }
+
+        .card_description {
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover .card_description {
+            opacity: 1;
+            transition-delay: 0.25s;
+        }
+
+        /* Enhanced transitions and animations */
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hover\:scale-110:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <!-- Placeholder for Navigation -->
+    <div id="navigation-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
+        <div class="container mx-auto text-center text-white px-4">
+            <h1 class="text-6xl font-serif mb-4 fade-in">Features of HonorQR</h1>
+            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Discover the powerful features and learn how it works.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">Our Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up">
+                    <img src="IMAGES/DALL·E 2024-07-30 10.51.45 - A serene and modern visual representation of 'Create an Account' and 'Login' steps for HonorQR. The image features a clean and minimalist design with .webp" alt="Feature 1">
+                    <div class="card_content">
+                        <span class="card_title">Digital Memorials</span>
+                        <span class="card_subtitle">Create personalized digital memorials</span>
+                        <p class="card_description">Preserve the legacy of your loved ones with photos, videos, and stories.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="100">
+                    <img src="IMAGES/DALL·E 2024-07-30 10.52.32 - A detailed visual representation of 'Create a Memorial Profile' for HonorQR. The image features a computer screen displaying the process of filling in.webp" alt="Feature 2">
+                    <div class="card_content">
+                        <span class="card_title">Interactive Tribute Wall</span>
+                        <span class="card_subtitle">Engage with a community</span>
+                        <p class="card_description">Share messages and stories on the interactive tribute wall.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="200">
+                    <img src="IMAGES/IMG-20240711-WA0000.jpg" alt="Feature 3">
+                    <div class="card_content">
+                        <span class="card_title">QR Code Integration</span>
+                        <span class="card_subtitle">Seamlessly link physical and digital</span>
+                        <p class="card_description">Link physical memorials to digital profiles with durable, weatherproof QR codes.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="300">
+                    <img src="IMAGES/DALL·E 2024-07-30 11.01.25 - A detailed visual representation of 'Audio Memories' for HonorQR. The image features a computer screen displaying an interface for uploading and playi.webp" alt="Feature 4">
+                    <div class="card_content">
+                        <span class="card_title">Audio Memories</span>
+                        <span class="card_subtitle">Preserve voices and stories</span>
+                        <p class="card_description">Add a personal and intimate dimension to memorials with audio messages.</p>
+                    </div>
+                </div>
+                <!-- Feature 5 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="400">
+                    <img src="IMAGES/DALL·E 2024-07-30 11.00.51 - A detailed visual representation of 'Audio Memories' for HonorQR. The image features a computer screen displaying the interface for uploading and play.webp" alt="Feature 5">
+                    <div class="card_content">
+                        <span class="card_title">Multilingual Support</span>
+                        <span class="card_subtitle">Accessibility for a global audience</span>
+                        <p class="card_description">Engage meaningfully with multilingual support.</p>
+                    </div>
+                </div>
+                <!-- Feature 6 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="500">
+                    <img src="IMAGES/DALL·E 2024-07-30 11.00.13 - A detailed visual representation of 'Use the Mobile App' for HonorQR. The image features a smartphone screen displaying the HonorQR mobile app interfa.webp" alt="Feature 6">
+                    <div class="card_content">
+                        <span class="card_title">Mobile App</span>
+                        <span class="card_subtitle">Access memorials on-the-go</span>
+                        <p class="card_description">Stay connected anytime, anywhere with our user-friendly mobile app.</p>
+                    </div>
+                </div>
+                <!-- Feature 7 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="600">
+                    <img src="IMAGES/DALL·E 2024-07-30 10.55.12 - A detailed visual representation of 'Interactive Tribute Wall' for HonorQR. The image features a computer screen displaying the interactive tribute wa.webp" alt="Feature 7">
+                    <div class="card_content">
+                        <span class="card_title">Interactive Tribute Wall</span>
+                        <span class="card_subtitle">Share your thoughts</span>
+                        <p class="card_description">Engage with the community by sharing your memories.</p>
+                    </div>
+                </div>
+                <!-- Feature 8 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="700">
+                    <img src="IMAGES/DALL·E 2024-07-30 10.58.30 - A detailed visual representation of 'Access Grief Support Resources' for HonorQR. The image features a computer screen displaying a grief support page.webp" alt="Feature 8">
+                    <div class="card_content">
+                        <span class="card_title">Grief Support</span>
+                        <span class="card_subtitle">Find comfort and support</span>
+                        <p class="card_description">Access resources that offer comfort and support during tough times.</p>
+                    </div>
+                </div>
+                <!-- Feature 9 -->
+                <div class="card smooth-transition hover:scale-110" data-aos="fade-up" data-aos-delay="800">
+                    <img src="IMAGES/DALL·E 2024-07-30 10.55.47 - A detailed visual representation of 'Livestreaming Funeral Services' for HonorQR. The image features a computer screen displaying a livestream of a me.webp" alt="Feature 9">
+                    <div class="card_content">
+                        <span class="card_title">Livestreaming Services</span>
+                        <span class="card_subtitle">Stay connected in real-time</span>
+                        <p class="card_description">Attend and participate in services from anywhere through livestreaming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Function to load external HTML files into a placeholder
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+
+                    // Initialize mobile menu functionality after loading navigation
+                    if (elementId === 'navigation-placeholder') {
+                        initializeMobileMenu();
+                    }
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Load navigation and footer
+        loadHTML('navigation.html', 'navigation-placeholder');
+        loadHTML('footer.html', 'footer-placeholder');
+
+        // Initialize mobile menu functionality
+        function initializeMobileMenu() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Initialize animations and other scripts
+        AOS.init();
+
+        // Hide loading animation after content is loaded
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
