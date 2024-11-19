@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=c:\Users\inc\Documents\GitHub\Honor-QR-v1\.venv
+set VIRTUAL_ENV=c:\Users\inc\Documents\GitHub\HonorQr1\HonorQr\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 

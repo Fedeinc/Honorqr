@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HonorQR - Preserve Memories Forever</title>
-    <meta name="description" content="HonorQR integrates technology with traditional memorials, offering a dynamic and interactive way to remember loved ones.">
-    <meta name="keywords" content="digital memorials, QR codes, preserve memories, HonorQR, legacy, remembrance">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        /* Base styles for consistency */
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   HonorQR - Preserve Memories Forever
+  </title>
+  <meta content="HonorQR integrates technology with traditional memorials, offering a dynamic and interactive way to remember loved ones." name="description"/>
+  <meta content="digital memorials, QR codes, preserve memories, HonorQR, legacy, remembrance" name="keywords"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   /* Base styles for consistency */
         body {
             background-color: #EBF4F6; /* Light Aqua */
             color: #071952; /* Dark Navy Blue */
@@ -172,289 +173,334 @@
                 stroke-dashoffset: 0;
             }
         }
-    </style>
-</head>
-
-<body>
-    <!-- Loading animation with sprite animation -->
-    <div id="loading" class="sprite-animation"></div>
-
-    <!-- Navigation -->
-    <div id="navigation-placeholder"></div>
-
-    <!-- Hero Section -->
-    <section class="flex justify-center items-center h-screen text-center hero-bg">
-        <div class="container mx-auto px-4">
-            <h1 class="mb-4 font-serif text-6xl fade-in text-white">Welcome to HonorQR.</h1>
-            <p class="mb-8 text-2xl fade-in text-gray-200" data-aos="fade-up">Embrace the Future of Digital Memorials</p>
-            <a href="#features" class="px-6 py-3 rounded-lg text-lg btn-primary hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg">Discover More</a>
-        </div>
-    </section>
-
-    <!-- Intro Section -->
-    <section id="home-intro" class="py-20 bg-gradient text-white">
-        <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-5xl font-bold mb-4" data-aos="fade-down">Where Memories Endure</h1>
-                <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">
-                    You can't stop time, but you can stop memories from fading. HonorQR is your final opportunity to ensure that the essence of those you've lost isn't just remembered but continues to shape the world they left behind.
-                </p>
-            </div>
-
-            <div class="grid" data-aos="fade-up" data-aos-delay="200">
-                <!-- Consistent design and messaging for all elements -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">Preserve What Matters Most</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Memories are precious, and they can fade with time. HonorQR empowers you to capture and protect the fleeting moments and legacies of your loved ones. Don't let their stories be forgotten—hold on to their memory with HonorQR.
-                    </p>
-                </div>
-
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">The Eternal Sanctuary</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        In a world where everything fades, imagine a place where every smile, every touch, and every piece of wisdom lives on. HonorQR creates a digital sanctuary where memories are not just preserved but celebrated, ensuring they thrive for eternity.
-                    </p>
-                </div>
-
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">Immortalize Their Legacy</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        What happens when we're gone? Will the stories, the struggles, and the triumphs of those we love be remembered? HonorQR ensures that the legacies of your loved ones are honored and celebrated, not just today, but for generations to come.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">Preserve Memories with HonorQR</h2>
-                <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
-                    Explore the unique features of HonorQR that allow you to preserve and cherish memories in a meaningful way.
-                </p>
-            </div>
-
-            <div class="grid" data-aos="fade-up" data-aos-delay="200">
-                <!-- Feature 1: Preserve Memories through QR -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/IMG-20240711-WA0020.jpg" alt="Preserve Memories through QR" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Preserve Memories through QR</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Link physical memorials to digital ones with our QR code technology. Scanning the QR code connects visitors to an online profile filled with stories, photos, and memories of your loved ones.
-                  </p>
-                </div>
-
-                <!-- Feature 2: Profile Bio -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/feature 1.jpg" alt="Profile Bio" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Profile Bio</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Create a detailed profile bio for your loved ones, capturing their essence and life story. Include personal anecdotes, achievements, and milestones to keep their memory alive.
-                  </p>
-                </div>
-
-                <!-- Feature 3: Gravesite Locator -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/Photoleap_27_06_2024_00_09_46_Hh4jw.jpg" alt="Gravesite Locator" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Gravesite Locator</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Use our Gravesite Locator to easily find and visit the resting place of your loved ones. Simply scan the QR code or enter the details to be guided directly to their gravesite.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emotional Appeal CTA Section -->
-    <section id="half-page-emotional-cta" class="h-screen md:h-1/2 bg-gradient-to-b from-gray-800 to-gray-900 text-white flex items-center">
-        <div class="container mx-auto text-center px-6 lg:px-8 py-12 md:py-24">
-            <h2 class="text-5xl font-bold mb-6" data-aos="zoom-in">Don't Let Their Memory Fade</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Memories are all we have left of our loved ones. Without action, those memories may fade away. HonorQR helps you preserve their legacy in a way that lasts forever.
-            </p>
-            <button class="px-10 py-3 bg-green-500 text-lg font-semibold rounded-full hover:bg-green-600 transition duration-300 ease-in-out shadow-lg">
-                Start Preserving Today
-            </button>
-        </div>
-    </section>
-
-    <!-- Additional Features Section -->
-    <section id="six-steps" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">6 Easy Steps to Get Started</h2>
-                <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
-                    Follow these simple steps to create your HonorQR account and start preserving memories.
-                </p>
-            </div>
-
-            <div class="grid" data-aos="fade-up" data-aos-delay="200">
-                <!-- Step 1: Sign Up -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="material-icons icon">person_add</i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 1: Sign Up</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Create your HonorQR account by signing up with your email or social media account. It's quick and easy, and it gives you access to all of our features.
-                    </p>
-                </div>
-
-                <!-- Step 2: Verify Your Email -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="fa fa-envelope icon"></i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 2: Verify Your Email</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Check your inbox for a verification email from HonorQR. Click the link inside to verify your account and secure your profile.
-                    </p>
-                </div>
-
-                <!-- Step 3: Create Your Profile -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="ui user circle icon"></i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 3: Create Your Profile</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Personalize your account by adding a profile picture, writing a short bio, and connecting with others. This is your space to share who you are.
-                    </p>
-                </div>
-
-                <!-- Step 4: Explore Features -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="material-icons icon">explore</i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 4: Explore Features</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Take a tour of the HonorQR platform and discover all the tools available to you, from creating digital memorials to setting up tribute walls.
-                    </p>
-                </div>
-
-                <!-- Step 5: Create a Digital Memorial -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="fa fa-heart icon"></i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 5: Create a Digital Memorial</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Begin by creating your first digital memorial. Upload photos, videos, and stories to preserve the memory of your loved ones for future generations.
-                    </p>
-                </div>
-
-                <!-- Step 6: Share and Connect -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <div class="flex items-center mb-4">
-                        <i class="anticon anticon-share-alt icon"></i>
-                        <h3 class="ml-4 text-2xl font-semibold text-gray-800">Step 6: Share and Connect</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Share your digital memorial with family and friends. Invite them to contribute, leave messages, and keep the memory alive together.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4" data-aos="fade-down">What Happens When You Do Nothing?</h2>
-                <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">
-                    Hear from those who almost lost everything, and how HonorQR helped them salvage what was nearly gone forever.
-                </p>
-            </div>
-
-            <div class="grid" data-aos="fade-up" data-aos-delay="200">
-                <!-- Testimonial 1 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-2 text-white text-center">John D.</h3>
-                    <p class="text-sm text-gray-400 text-center mb-6">"I never thought I’d forget my mother’s voice, but the years passed, and it started to fade. HonorQR brought it back—now I can hear her whenever I need to."</p>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-2 text-white text-center">Emily R.</h3>
-                    <p class="text-sm text-gray-400 text-center mb-6">"The day I realized I couldn’t remember my father’s laugh was the day I knew I had to do something. HonorQR saved what little was left of him."</p>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-2 text-white text-center">Michael T.</h3>
-                    <p class="text-sm text-gray-400 text-center mb-6">"I waited too long. By the time I realized, there was almost nothing left. HonorQR was my last chance to hold on to the memories that mattered most."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emotional Appeal Section -->
-    <section id="conclusion" class="py-20 bg-gradient text-white">
-        <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold mb-4" data-aos="fade-down">Don’t Let Their Memory Fade Away</h2>
-                <p class="text-xl text-gray-300" data-aos="fade-up" data-aos-delay="100">
-                    Time is relentless. Every second that passes, memories slip further into the void. What will remain of those you love when you are gone? With HonorQR, you have the power to defy time and keep their legacy alive. But the window to act is closing. Don’t wait until it’s too late.
-                </p>
-            </div>
-
-            <div class="grid" data-aos="fade-up" data-aos-delay="200">
-                <!-- Emotional Anchor 1: The Power of Memory -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/IMG-20240711-WA0011.jpg" alt="The Power of Memory" class="rounded-lg mb-4">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">The Power of Memory</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Memories are all you have left when everything else is gone. But memories are fragile. HonorQR helps you protect and preserve them, so they’re not lost forever. Without action, your loved one’s legacy risks being forgotten.
-                    </p>
-                </div>
-
-                <!-- Emotional Anchor 2: The Pain of Forgetting -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/IMG-20240711-WA0007.jpg" alt="The Pain of Forgetting" class="rounded-lg mb-4">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">The Pain of Forgetting</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Imagine a future where no one remembers their name. The stories, the laughter, the love—all gone. You have the power to prevent this. With HonorQR, you ensure that your loved one’s essence remains etched in the hearts of those who come after.
-                    </p>
-                </div>
-
-                <!-- Emotional Anchor 3: The Final Goodbye -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
-                    <img src="images/Photoleap_29_07_2024_22_22_25_zafM2.jpg" alt="The Final Goodbye" class="rounded-lg mb-4">
-                    <h3 class="text-3xl font-semibold mb-4 text-white">The Final Goodbye</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Saying goodbye is inevitable, but losing the memory of that goodbye is not. HonorQR gives you a way to make your final farewell everlasting. Do you really want to leave without ensuring they will be remembered?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Full-Page CTA Section -->
-    <section id="full-page-cta" class="h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white flex items-center justify-center">
-        <div class="container mx-auto text-center px-6 lg:px-8">
-            <h2 class="text-6xl font-bold mb-6" data-aos="zoom-in">Your Final Opportunity</h2>
-            <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Time is running out to ensure your loved one's legacy endures forever. Don't wait until it's too late. Take action now and preserve their memory for generations to come.
-            </p>
-            <button class="px-12 py-4 bg-orange-500 text-xl font-semibold rounded-full hover:bg-orange-600 transition duration-300 ease-in-out shadow-2xl">
-                Sign up Now!
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <!-- JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        // Function to load external HTML files into a placeholder
+  </style>
+ </head>
+ <body>
+  <!-- Loading animation with sprite animation -->
+  <div class="sprite-animation" id="loading">
+  </div>
+  <!-- Navigation -->
+  <div id="navigation-placeholder">
+  </div>
+  <!-- Hero Section -->
+  <section class="flex justify-center items-center h-screen text-center hero-bg">
+   <div class="container mx-auto px-4">
+    <h1 class="mb-4 font-serif text-6xl fade-in text-white">
+     Welcome to HonorQR.
+    </h1>
+    <p class="mb-8 text-2xl fade-in text-gray-200" data-aos="fade-up">
+     Embrace the Future of Digital Memorials
+    </p>
+    <a class="px-6 py-3 rounded-lg text-lg btn-primary hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg" href="#features">
+     Discover More
+    </a>
+   </div>
+  </section>
+  <!-- Intro Section -->
+  <section class="py-20 bg-gradient text-white" id="home-intro">
+   <div class="container mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+     <h1 class="text-5xl font-bold mb-4" data-aos="fade-down">
+      Where Memories Endure
+     </h1>
+     <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">
+      You can't stop time, but you can stop memories from fading. HonorQR is your final opportunity to ensure that the essence of those you've lost isn't just remembered but continues to shape the world they left behind.
+     </p>
+    </div>
+    <div class="grid" data-aos="fade-up" data-aos-delay="200">
+     <!-- Consistent design and messaging for all elements -->
+     <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       Preserve What Matters Most
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+       Memories are precious, and they can fade with time. HonorQR empowers you to capture and protect the fleeting moments and legacies of your loved ones. Don't let their stories be forgotten—hold on to their memory with HonorQR.
+      </p>
+     </div>
+     <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       The Eternal Sanctuary
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+       In a world where everything fades, imagine a place where every smile, every touch, and every piece of wisdom lives on. HonorQR creates a digital sanctuary where memories are not just preserved but celebrated, ensuring they thrive for eternity.
+      </p>
+     </div>
+     <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       Immortalize Their Legacy
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+       What happens when we're gone? Will the stories, the struggles, and the triumphs of those we love be remembered? HonorQR ensures that the legacies of your loved ones are honored and celebrated, not just today, but for generations to come.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Features Section -->
+  <section class="py-20 bg-gray-50" id="features">
+   <div class="container mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+     <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">
+      Preserve Memories with HonorQR
+     </h2>
+     <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
+      Explore the unique features of HonorQR that allow you to preserve and cherish memories in a meaningful way.
+     </p>
+    </div>
+    <div class="grid" data-aos="fade-up" data-aos-delay="200">
+     <!-- Feature 1: Preserve Memories through QR -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="Preserve Memories through QR" class="rounded-lg mb-4" src="images/IMG-20240711-WA0020.jpg"/>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Preserve Memories through QR
+      </h3>
+      <p class="text-gray-600 leading-relaxed">
+       Link physical memorials to digital ones with our QR code technology. Scanning the QR code connects visitors to an online profile filled with stories, photos, and memories of your loved ones.
+      </p>
+     </div>
+     <!-- Feature 2: Profile Bio -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="Profile Bio" class="rounded-lg mb-4" src="images/feature 1.jpg"/>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Profile Bio
+      </h3>
+      <p class="text-gray-600 leading-relaxed">
+       Create a detailed profile bio for your loved ones, capturing their essence and life story. Include personal anecdotes, achievements, and milestones to keep their memory alive.
+      </p>
+     </div>
+     <!-- Feature 3: Gravesite Locator -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="Gravesite Locator" class="rounded-lg mb-4" src="images/Photoleap_27_06_2024_00_09_46_Hh4jw.jpg"/>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Gravesite Locator
+      </h3>
+      <p class="text-gray-600 leading-relaxed">
+       Use our Gravesite Locator to easily find and visit the resting place of your loved ones. Simply scan the QR code or enter the details to be guided directly to their gravesite.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Emotional Appeal CTA Section -->
+  <section class="h-screen md:h-1/2 bg-gradient-to-b from-gray-800 to-gray-900 text-white flex items-center" id="half-page-emotional-cta">
+   <div class="container mx-auto text-center px-6 lg:px-8 py-12 md:py-24">
+    <h2 class="text-5xl font-bold mb-6" data-aos="zoom-in">
+     Don't Let Their Memory Fade
+    </h2>
+    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+     Memories are all we have left of our loved ones. Without action, those memories may fade away. HonorQR helps you preserve their legacy in a way that lasts forever.
+    </p>
+    <button class="px-10 py-3 bg-green-500 text-lg font-semibold rounded-full hover:bg-green-600 transition duration-300 ease-in-out shadow-lg">
+     Start Preserving Today
+    </button>
+   </div>
+  </section>
+  <!-- Additional Features Section -->
+  <section class="py-20 bg-gray-50" id="six-steps">
+   <div class="container mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+     <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">
+      6 Easy Steps to Get Started
+     </h2>
+     <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
+      Follow these simple steps to create your HonorQR account and start preserving memories.
+     </p>
+    </div>
+    <div class="grid" data-aos="fade-up" data-aos-delay="200">
+     <!-- Step 1: Sign Up -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="material-icons icon">
+        person_add
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 1: Sign Up
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Create your HonorQR account by signing up with your email or social media account. It's quick and easy, and it gives you access to all of our features.
+      </p>
+     </div>
+     <!-- Step 2: Verify Your Email -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="fa fa-envelope icon">
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 2: Verify Your Email
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Check your inbox for a verification email from HonorQR. Click the link inside to verify your account and secure your profile.
+      </p>
+     </div>
+     <!-- Step 3: Create Your Profile -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="ui user circle icon">
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 3: Create Your Profile
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Personalize your account by adding a profile picture, writing a short bio, and connecting with others. This is your space to share who you are.
+      </p>
+     </div>
+     <!-- Step 4: Explore Features -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="material-icons icon">
+        explore
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 4: Explore Features
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Take a tour of the HonorQR platform and discover all the tools available to you, from creating digital memorials to setting up tribute walls.
+      </p>
+     </div>
+     <!-- Step 5: Create a Digital Memorial -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="fa fa-heart icon">
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 5: Create a Digital Memorial
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Begin by creating your first digital memorial. Upload photos, videos, and stories to preserve the memory of your loved ones for future generations.
+      </p>
+     </div>
+     <!-- Step 6: Share and Connect -->
+     <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <div class="flex items-center mb-4">
+       <i class="anticon anticon-share-alt icon">
+       </i>
+       <h3 class="ml-4 text-2xl font-semibold text-gray-800">
+        Step 6: Share and Connect
+       </h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+       Share your digital memorial with family and friends. Invite them to contribute, leave messages, and keep the memory alive together.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-800 text-white" id="testimonials">
+   <div class="container mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+     <h2 class="text-4xl font-bold mb-4" data-aos="fade-down">
+      What Happens When You Do Nothing?
+     </h2>
+     <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">
+      Hear from those who almost lost everything, and how HonorQR helped them salvage what was nearly gone forever.
+     </p>
+    </div>
+    <div class="grid" data-aos="fade-up" data-aos-delay="200">
+     <!-- Testimonial 1 -->
+     <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-2xl font-semibold mb-2 text-white text-center">
+       John D.
+      </h3>
+      <p class="text-sm text-gray-400 text-center mb-6">
+       "I never thought I’d forget my mother’s voice, but the years passed, and it started to fade. HonorQR brought it back—now I can hear her whenever I need to."
+      </p>
+     </div>
+     <!-- Testimonial 2 -->
+     <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-2xl font-semibold mb-2 text-white text-center">
+       Emily R.
+      </h3>
+      <p class="text-sm text-gray-400 text-center mb-6">
+       "The day I realized I couldn’t remember my father’s laugh was the day I knew I had to do something. HonorQR saved what little was left of him."
+      </p>
+     </div>
+     <!-- Testimonial 3 -->
+     <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <h3 class="text-2xl font-semibold mb-2 text-white text-center">
+       Michael T.
+      </h3>
+      <p class="text-sm text-gray-400 text-center mb-6">
+       "I waited too long. By the time I realized, there was almost nothing left. HonorQR was my last chance to hold on to the memories that mattered most."
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Emotional Appeal Section -->
+  <section class="py-20 bg-gradient text-white" id="conclusion">
+   <div class="container mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+     <h2 class="text-5xl font-bold mb-4" data-aos="fade-down">
+      Don’t Let Their Memory Fade Away
+     </h2>
+     <p class="text-xl text-gray-300" data-aos="fade-up" data-aos-delay="100">
+      Time is relentless. Every second that passes, memories slip further into the void. What will remain of those you love when you are gone? With HonorQR, you have the power to defy time and keep their legacy alive. But the window to act is closing. Don’t wait until it’s too late.
+     </p>
+    </div>
+    <div class="grid" data-aos="fade-up" data-aos-delay="200">
+     <!-- Emotional Anchor 1: The Power of Memory -->
+     <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="The Power of Memory" class="rounded-lg mb-4" src="images/IMG-20240711-WA0011.jpg"/>
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       The Power of Memory
+      </h3>
+      <p class="text-gray-400 leading-relaxed">
+       Memories are all you have left when everything else is gone. But memories are fragile. HonorQR helps you protect and preserve them, so they’re not lost forever. Without action, your loved one’s legacy risks being forgotten.
+      </p>
+     </div>
+     <!-- Emotional Anchor 2: The Pain of Forgetting -->
+     <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="The Pain of Forgetting" class="rounded-lg mb-4" src="images/IMG-20240711-WA0007.jpg"/>
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       The Pain of Forgetting
+      </h3>
+      <p class="text-gray-400 leading-relaxed">
+       Imagine a future where no one remembers their name. The stories, the laughter, the love—all gone. You have the power to prevent this. With HonorQR, you ensure that your loved one’s essence remains etched in the hearts of those who come after.
+      </p>
+     </div>
+     <!-- Emotional Anchor 3: The Final Goodbye -->
+     <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105">
+      <img alt="The Final Goodbye" class="rounded-lg mb-4" src="images/Photoleap_29_07_2024_22_22_25_zafM2.jpg"/>
+      <h3 class="text-3xl font-semibold mb-4 text-white">
+       The Final Goodbye
+      </h3>
+      <p class="text-gray-400 leading-relaxed">
+       Saying goodbye is inevitable, but losing the memory of that goodbye is not. HonorQR gives you a way to make your final farewell everlasting. Do you really want to leave without ensuring they will be remembered?
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Full-Page CTA Section -->
+  <section class="h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white flex items-center justify-center" id="full-page-cta">
+   <div class="container mx-auto text-center px-6 lg:px-8">
+    <h2 class="text-6xl font-bold mb-6" data-aos="zoom-in">
+     Your Final Opportunity
+    </h2>
+    <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+     Time is running out to ensure your loved one's legacy endures forever. Don't wait until it's too late. Take action now and preserve their memory for generations to come.
+    </p>
+    <button class="px-12 py-4 bg-orange-500 text-xl font-semibold rounded-full hover:bg-orange-600 transition duration-300 ease-in-out shadow-2xl">
+     Sign up Now!
+    </button>
+   </div>
+  </section>
+  <!-- Footer -->
+  <div id="footer-placeholder">
+  </div>
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+  </script>
+  <script>
+   // Function to load external HTML files into a placeholder
         function loadHTML(file, elementId, callback) {
             fetch(file)
                 .then(response => response.text())
@@ -492,7 +538,6 @@
                 document.getElementById('loading').style.display = 'none';
             }, 500);
         });
-    </script>
-</body>
-
+  </script>
+ </body>
 </html>

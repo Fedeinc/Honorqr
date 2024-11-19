@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tribute Wall</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      .fade-in {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Tribute Wall
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+   .fade-in {
         animation: fadeIn 1s ease-in-out;
       }
       @keyframes fadeIn {
@@ -25,59 +24,77 @@
         transform: scale(1.05);
         transition: transform 0.3s;
       }
-    </style>
-  </head>
-
-  <body class="bg-gray-100">
-    <header class="bg-gray-900 text-white py-4 shadow-lg">
-      <nav class="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold">Tribute Wall</a>
-        <button class="bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-700 focus:outline-none">Toggle Theme</button>
-      </nav>
-    </header>
-
-    <main class="max-w-5xl mx-auto p-6">
-      <section class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Tribute Wall</h1>
-        <p class="text-lg text-gray-600 fade-in">Share your tributes and memories for loved ones</p>
-      </section>
-
-      <!-- Tribute Submission Form -->
-      <section class="mb-12 bg-white p-8 shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Share a Tribute</h2>
-        <form id="tributeForm" class="space-y-4">
-          <input type="text" id="name" class="w-full border rounded p-3" placeholder="Your Name" required />
-          <textarea id="tributeMessage" class="w-full border rounded p-3" rows="4" placeholder="Share a memory or tribute" required></textarea>
-          <input type="file" id="imageInput" class="w-full border rounded p-3" accept="image/*" />
-          <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition duration-300 ease-in-out">Post Tribute</button>
-        </form>
-      </section>
-
-      <!-- Tribute Wall Grid -->
-      <section class="bg-white p-8 shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Tributes</h2>
-        <div id="tributeWall" class="grid grid-cols-3 gap-4">
-          <!-- Tributes will be dynamically added here -->
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white text-center py-4">
-      <p>&copy; 2024 HonorQR - All Rights Reserved</p>
-    </footer>
-
-    <!-- Modal -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center">
-      <div class="bg-white p-6 rounded-lg relative">
-        <button id="closeModal" class="absolute top-2 right-2 text-gray-500">&times;</button>
-        <img id="modalImage" class="w-full h-auto rounded-lg" alt="Tribute Image" />
-        <h3 id="modalName" class="text-xl font-bold text-gray-800 mt-4"></h3>
-        <p id="modalMessage" class="text-gray-600 mt-2"></p>
-      </div>
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-gray-900 text-white py-4 shadow-lg">
+   <nav class="max-w-7xl mx-auto flex justify-between items-center">
+    <a class="text-xl font-bold" href="index.html">
+     Tribute Wall
+    </a>
+    <button class="bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-700 focus:outline-none">
+     Toggle Theme
+    </button>
+    <li class="nav-item">
+     <a href="/login">
+      Login
+     </a>
+    </li>
+   </nav>
+  </header>
+  <main class="max-w-5xl mx-auto p-6">
+   <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">
+     Tribute Wall
+    </h1>
+    <p class="text-lg text-gray-600 fade-in">
+     Share your tributes and memories for loved ones
+    </p>
+   </section>
+   <!-- Tribute Submission Form -->
+   <section class="mb-12 bg-white p-8 shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+     Share a Tribute
+    </h2>
+    <form class="space-y-4" id="tributeForm">
+     <input class="w-full border rounded p-3" id="name" placeholder="Your Name" required="" type="text"/>
+     <textarea class="w-full border rounded p-3" id="tributeMessage" placeholder="Share a memory or tribute" required="" rows="4"></textarea>
+     <input accept="image/*" class="w-full border rounded p-3" id="imageInput" type="file"/>
+     <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition duration-300 ease-in-out" type="submit">
+      Post Tribute
+     </button>
+    </form>
+   </section>
+   <!-- Tribute Wall Grid -->
+   <section class="bg-white p-8 shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+     Tributes
+    </h2>
+    <div class="grid grid-cols-3 gap-4" id="tributeWall">
+     <!-- Tributes will be dynamically added here -->
     </div>
-
-    <script>
-      document.getElementById('tributeForm').addEventListener('submit', function (event) {
+   </section>
+  </main>
+  <footer class="bg-gray-900 text-white text-center py-4">
+   <p>
+    © 2024 HonorQR - All Rights Reserved
+   </p>
+  </footer>
+  <!-- Modal -->
+  <div class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center" id="modal">
+   <div class="bg-white p-6 rounded-lg relative">
+    <button class="absolute top-2 right-2 text-gray-500" id="closeModal">
+     ×
+    </button>
+    <img alt="Tribute Image" class="w-full h-auto rounded-lg" id="modalImage"/>
+    <h3 class="text-xl font-bold text-gray-800 mt-4" id="modalName">
+    </h3>
+    <p class="text-gray-600 mt-2" id="modalMessage">
+    </p>
+   </div>
+  </div>
+  <script>
+   document.getElementById('tributeForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         // Get values from the form
@@ -143,6 +160,6 @@
       document.getElementById('closeModal').addEventListener('click', function () {
         document.getElementById('modal').classList.add('hidden');
       });
-    </script>
-  </body>
+  </script>
+ </body>
 </html>

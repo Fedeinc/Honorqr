@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remembrance Calendar - HonorQR</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
-    <style>
-        #timeline::before {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Remembrance Calendar - HonorQR
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet"/>
+  <style>
+   #timeline::before {
             content: '';
             position: absolute;
             left: 50%;
@@ -62,114 +64,224 @@
             background: #3182ce;
             border-radius: 50%;
         }
-    </style>
-</head>
-
-<body class="bg-gray-100 font-sans">
-    <!-- Navigation Bar -->
-    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="dashboard.html" class="flex items-center space-x-3">
-                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="font-semibold text-white text-xl">HonorQR</span>
-                    </a>
-                </div>
-                <div class="md:flex hidden md:ml-4">
-                    <ul class="flex space-x-8">
-                        <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                        <li><a href="tribute-wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
-                        <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                        <li><a href="qr-locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
-                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
-                        <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                        <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                        <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
-                    </ul>
-                </div>
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
-                <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                <li><a href="tribute-wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
-                <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                <li><a href="qr-locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
-                <li><a href="qr-share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
-                <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <script>
-        document.getElementById('hamburger-button').addEventListener('click', function () {
+  </style>
+ </head>
+ <body class="bg-gray-100 font-sans">
+  <!-- Navigation Bar -->
+  <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
+   <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+    <div class="flex justify-between items-center h-16">
+     <div class="flex items-center">
+      <a class="flex items-center space-x-3" href="dashboard.html">
+       <img alt="HonorQR Logo" class="h-10" src="IMAGES/logo.jpg"/>
+       <span class="font-semibold text-white text-xl">
+        HonorQR
+       </span>
+      </a>
+     </div>
+     <div class="md:flex hidden md:ml-4">
+      <ul class="flex space-x-8">
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="profile.html">
+         Profile
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="tribute-wall.html">
+         Tribute
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="qr-locator.html">
+         Locator
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="qr-share.html">
+         Share
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="remembrance.html">
+         Remembrance
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="chatbot.html">
+         Chatbot
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="faq.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-gray-700" href="login.html">
+         Login
+        </a>
+       </li>
+       <li>
+        <a class="px-3 py-2 rounded text-white hover:bg-red-700" href="dashboard.html">
+         Dashboard
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="md:hidden">
+      <button class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white" id="hamburger-button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="hidden md:hidden" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="profile.html">
+       Profile
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="tribute-wall.html">
+       Tribute Wall
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="gallery.html">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="qr-locator.html">
+       QR Locator
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="qr-share.html">
+       Share QR
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="remembrance.html">
+       Remembrance
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="chatbot.html">
+       Chatbot
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="faq.html">
+       FAQ
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-gray-700" href="login.html">
+       Login
+      </a>
+     </li>
+     <li>
+      <a class="block px-4 py-2 rounded text-white hover:bg-red-700" href="logout.html">
+       Logout
+      </a>
+     </li>
+    </ul>
+   </div>
+   <li class="nav-item">
+    <a href="/login">
+     Login
+    </a>
+   </li>
+  </nav>
+  <script>
+   document.getElementById('hamburger-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-    </script>
-
-    <!-- Main Content -->
-    <main class="container mx-auto mt-20 p-4">
-        <h1 class="text-3xl font-semibold text-gray-900 mb-4">Remembrance Calendar</h1>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Dates</h2>
-            <div id="calendar" class="flatpickr mb-6"></div>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Lifetime Achievements</h2>
-            <ul id="achievements-list" class="space-y-4">
-                <!-- These will be dynamically populated -->
-            </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Add a Remembrance Date</h2>
-            <form id="remembrance-form">
-                <div class="mb-4">
-                    <label for="title" class="block text-gray-700">Title</label>
-                    <input type="text" id="title" name="title" class="w-full p-2 border rounded-lg" placeholder="e.g., Birthday, Anniversary">
-                </div>
-                <div class="mb-4">
-                    <label for="date" class="block text-gray-700">Date</label>
-                    <input type="text" id="date" name="date" class="w-full p-2 border rounded-lg flatpickr">
-                </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Add Date</button>
-            </form>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Timeline</h2>
-            <div id="timeline" class="relative space-y-8">
-                <!-- Timeline items will be dynamically populated here -->
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
-                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+  </script>
+  <!-- Main Content -->
+  <main class="container mx-auto mt-20 p-4">
+   <h1 class="text-3xl font-semibold text-gray-900 mb-4">
+    Remembrance Calendar
+   </h1>
+   <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+     Upcoming Dates
+    </h2>
+    <div class="flatpickr mb-6" id="calendar">
+    </div>
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+     Lifetime Achievements
+    </h2>
+    <ul class="space-y-4" id="achievements-list">
+     <!-- These will be dynamically populated -->
+    </ul>
+   </div>
+   <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+     Add a Remembrance Date
+    </h2>
+    <form id="remembrance-form">
+     <div class="mb-4">
+      <label class="block text-gray-700" for="title">
+       Title
+      </label>
+      <input class="w-full p-2 border rounded-lg" id="title" name="title" placeholder="e.g., Birthday, Anniversary" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700" for="date">
+       Date
+      </label>
+      <input class="w-full p-2 border rounded-lg flatpickr" id="date" name="date" type="text"/>
+     </div>
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" type="submit">
+      Add Date
+     </button>
+    </form>
+   </div>
+   <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+     Timeline
+    </h2>
+    <div class="relative space-y-8" id="timeline">
+     <!-- Timeline items will be dynamically populated here -->
+    </div>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+   <div class="container mx-auto text-center">
+    <span class="text-sm font-bold">
+     © 2024 HonorQR. All rights reserved.
+    </span>
+    <div class="mt-4 space-x-4">
+     <a class="text-gray-400 hover:text-white" href="#">
+      Privacy Policy
+     </a>
+     <a class="text-gray-400 hover:text-white" href="#">
+      Terms of Service
+     </a>
+     <a class="text-gray-400 hover:text-white" href="#">
+      Contact
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
             flatpickr('#calendar', {
                 inline: true,
                 enableTime: false,
@@ -241,7 +353,6 @@
                 }
             });
         });
-    </script>
-</body>
-
+  </script>
+ </body>
 </html>

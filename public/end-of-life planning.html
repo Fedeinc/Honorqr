@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>End-of-Life Planning - HonorQR</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   End-of-Life Planning - HonorQR
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+   body {
             background-color: #f9f9f9;
             color: #333;
             font-family: 'Arial', sans-serif;
@@ -25,101 +26,223 @@
         .content {
             padding: 2rem;
         }
-    </style>
-</head>
-
-<body>
-    <!-- Header -->
-    <header class="header py-4">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
-                    <span class="text-xl font-semibold ml-3">HonorQR</span>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="features.html">Features</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:bg-gray-700 p-2 rounded" aria-label="Toggle Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-<div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
-        <nav class="flex flex-col px-4 py-2">
-            <a href="index.html" class="py-2 text-gray-900 hover:bg-gray-700">Home</a>
-            <a href="about.html" class="py-2 text-gray-900 hover:bg-gray-700">About</a>
-            <a href="features.html" class="py-2 text-gray-900 hover:bg-gray-700">Features</a>
-            <a href="pricing.html" class="py-2 text-gray-900 hover:bg-gray-700">Pricing</a>
-            <a href="contact.html" class="py-2 text-gray-900 hover:bg-gray-700">Contact</a>
-        </nav>
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <header class="header py-4">
+   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between">
+     <div class="flex items-center">
+      <img alt="HonorQR Logo" class="h-10" src="IMAGES/logo.jpg"/>
+      <span class="text-xl font-semibold ml-3">
+       HonorQR
+      </span>
+     </div>
+     <nav class="hidden md:flex space-x-8">
+      <a href="index.html">
+       Home
+      </a>
+      <a href="about.html">
+       About
+      </a>
+      <a href="features.html">
+       Features
+      </a>
+      <a href="pricing.html">
+       Pricing
+      </a>
+      <a href="contact.html">
+       Contact
+      </a>
+      <li class="nav-item">
+       <a href="/login">
+        Login
+       </a>
+      </li>
+     </nav>
+     <div class="md:hidden">
+      <button aria-label="Toggle Menu" class="text-gray-500 hover:bg-gray-700 p-2 rounded" id="mobile-menu-button">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+     </div>
     </div>
-
-    <!-- Main Content -->
-    <main class="content max-w-screen-lg mx-auto py-8">
-        <h1 class="text-4xl font-bold mb-6">End-of-Life Planning</h1>
-        <p class="mb-4">HonorQR offers comprehensive end-of-life planning services to help individuals and families prepare for the future with peace of mind. Our services include personalized memorial profiles, interactive tribute walls, and advanced features to ensure that your loved one's legacy is preserved and celebrated.</p>
-
-        <section class="mb-8">
-            <h2 class="text-3xl font-semibold mb-4">Services Provided</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong>Personalized Memorial Profiles:</strong> Create a detailed digital profile for your loved one, upload photos, videos, and stories to commemorate their life.</li>
-                <li><strong>Interactive Tribute Walls:</strong> Engage with family and friends by sharing messages and stories, fostering a community of remembrance and support.</li>
-                <li><strong>Digital Legacy Preservation:</strong> Securely store and manage important documents and personal messages to ensure accessibility for future generations.</li>
-                <li><strong>Grief Support and Resources:</strong> Access a wide range of grief support resources and coping mechanisms, join support groups, and receive professional guidance.</li>
-                <li><strong>QR Code Integration:</strong> Link physical memorials to digital profiles with durable, weatherproof QR codes for an enhanced memorial experience.</li>
-                <li><strong>Audio Memories:</strong> Preserve voices and stories with audio messages, adding a personal and intimate dimension to memorials.</li>
-                <li><strong>Multilingual Support:</strong> Ensure accessibility for a global audience with multilingual support and language options for memorial content.</li>
-                <li><strong>Mobile App:</strong> Access and interact with memorials on-the-go with our user-friendly mobile app.</li>
-                <li><strong>Donation Management:</strong> Set up donation options for causes your loved one cared about, manage and track donations through the digital memorial profile.</li>
-                <li><strong>Memorial Planning Services:</strong> Receive assistance with planning and organizing memorial services, including templates and guides for writing obituaries, eulogies, and more.</li>
-            </ul>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-3xl font-semibold mb-4">How It Works</h2>
-            <ol class="list-decimal pl-5 space-y-2">
-                <li><strong>Sign Up:</strong> Create an account on HonorQR to get started and choose a plan that suits your needs and preferences.</li>
-                <li><strong>Create a Profile:</strong> Fill out the necessary details to create a personalized memorial profile, upload photos, videos, and other media.</li>
-                <li><strong>Customize and Share:</strong> Customize the profile with personal anecdotes, quotes, and stories, and share the digital memorial with family and friends.</li>
-                <li><strong>Engage and Remember:</strong> Use the interactive tribute wall to engage with others and share memories, and access grief support resources and professional guidance.</li>
-                <li><strong>Preserve and Celebrate:</strong> Ensure that your loved one's legacy is preserved and celebrated for future generations with advanced features like QR code integration and audio memories.</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
-            <p class="mb-4">For more information or to get started with end-of-life planning, please visit our <a href="contact.html" class="text-blue-500 hover:underline">Contact Us</a> page or reach out to our support team at <a href="mailto:support@honorqr.com" class="text-blue-500 hover:underline">support@honorqr.online</a></p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer text-white py-8">
-        <div class="container mx-auto text-center">
-            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
-            <div class="mt-4 space-x-4">
-                <a href="privacy.html" class="hover:text-gray-300">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-gray-300">Terms of Service</a>
-                <a href="contact.html" class="hover:text-gray-300">Contact</a>
-            </div>
-        </div>
-</footer>
-
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+   </div>
+  </header>
+  <div class="hidden md:hidden bg-gray-50 border-t border-gray-200" id="mobile-menu">
+   <nav class="flex flex-col px-4 py-2">
+    <a class="py-2 text-gray-900 hover:bg-gray-700" href="index.html">
+     Home
+    </a>
+    <a class="py-2 text-gray-900 hover:bg-gray-700" href="about.html">
+     About
+    </a>
+    <a class="py-2 text-gray-900 hover:bg-gray-700" href="features.html">
+     Features
+    </a>
+    <a class="py-2 text-gray-900 hover:bg-gray-700" href="pricing.html">
+     Pricing
+    </a>
+    <a class="py-2 text-gray-900 hover:bg-gray-700" href="contact.html">
+     Contact
+    </a>
+   </nav>
+  </div>
+  <!-- Main Content -->
+  <main class="content max-w-screen-lg mx-auto py-8">
+   <h1 class="text-4xl font-bold mb-6">
+    End-of-Life Planning
+   </h1>
+   <p class="mb-4">
+    HonorQR offers comprehensive end-of-life planning services to help individuals and families prepare for the future with peace of mind. Our services include personalized memorial profiles, interactive tribute walls, and advanced features to ensure that your loved one's legacy is preserved and celebrated.
+   </p>
+   <section class="mb-8">
+    <h2 class="text-3xl font-semibold mb-4">
+     Services Provided
+    </h2>
+    <ul class="list-disc pl-5 space-y-2">
+     <li>
+      <strong>
+       Personalized Memorial Profiles:
+      </strong>
+      Create a detailed digital profile for your loved one, upload photos, videos, and stories to commemorate their life.
+     </li>
+     <li>
+      <strong>
+       Interactive Tribute Walls:
+      </strong>
+      Engage with family and friends by sharing messages and stories, fostering a community of remembrance and support.
+     </li>
+     <li>
+      <strong>
+       Digital Legacy Preservation:
+      </strong>
+      Securely store and manage important documents and personal messages to ensure accessibility for future generations.
+     </li>
+     <li>
+      <strong>
+       Grief Support and Resources:
+      </strong>
+      Access a wide range of grief support resources and coping mechanisms, join support groups, and receive professional guidance.
+     </li>
+     <li>
+      <strong>
+       QR Code Integration:
+      </strong>
+      Link physical memorials to digital profiles with durable, weatherproof QR codes for an enhanced memorial experience.
+     </li>
+     <li>
+      <strong>
+       Audio Memories:
+      </strong>
+      Preserve voices and stories with audio messages, adding a personal and intimate dimension to memorials.
+     </li>
+     <li>
+      <strong>
+       Multilingual Support:
+      </strong>
+      Ensure accessibility for a global audience with multilingual support and language options for memorial content.
+     </li>
+     <li>
+      <strong>
+       Mobile App:
+      </strong>
+      Access and interact with memorials on-the-go with our user-friendly mobile app.
+     </li>
+     <li>
+      <strong>
+       Donation Management:
+      </strong>
+      Set up donation options for causes your loved one cared about, manage and track donations through the digital memorial profile.
+     </li>
+     <li>
+      <strong>
+       Memorial Planning Services:
+      </strong>
+      Receive assistance with planning and organizing memorial services, including templates and guides for writing obituaries, eulogies, and more.
+     </li>
+    </ul>
+   </section>
+   <section class="mb-8">
+    <h2 class="text-3xl font-semibold mb-4">
+     How It Works
+    </h2>
+    <ol class="list-decimal pl-5 space-y-2">
+     <li>
+      <strong>
+       Sign Up:
+      </strong>
+      Create an account on HonorQR to get started and choose a plan that suits your needs and preferences.
+     </li>
+     <li>
+      <strong>
+       Create a Profile:
+      </strong>
+      Fill out the necessary details to create a personalized memorial profile, upload photos, videos, and other media.
+     </li>
+     <li>
+      <strong>
+       Customize and Share:
+      </strong>
+      Customize the profile with personal anecdotes, quotes, and stories, and share the digital memorial with family and friends.
+     </li>
+     <li>
+      <strong>
+       Engage and Remember:
+      </strong>
+      Use the interactive tribute wall to engage with others and share memories, and access grief support resources and professional guidance.
+     </li>
+     <li>
+      <strong>
+       Preserve and Celebrate:
+      </strong>
+      Ensure that your loved one's legacy is preserved and celebrated for future generations with advanced features like QR code integration and audio memories.
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h2 class="text-3xl font-semibold mb-4">
+     Contact Us
+    </h2>
+    <p class="mb-4">
+     For more information or to get started with end-of-life planning, please visit our
+     <a class="text-blue-500 hover:underline" href="contact.html">
+      Contact Us
+     </a>
+     page or reach out to our support team at
+     <a class="text-blue-500 hover:underline" href="mailto:support@honorqr.com">
+      support@honorqr.online
+     </a>
+    </p>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer text-white py-8">
+   <div class="container mx-auto text-center">
+    <span class="text-sm font-bold">
+     © 2024 HonorQR. All rights reserved.
+    </span>
+    <div class="mt-4 space-x-4">
+     <a class="hover:text-gray-300" href="privacy.html">
+      Privacy Policy
+     </a>
+     <a class="hover:text-gray-300" href="terms.html">
+      Terms of Service
+     </a>
+     <a class="hover:text-gray-300" href="contact.html">
+      Contact
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-    </script>
-</body>
-
+  </script>
+ </body>
 </html>
